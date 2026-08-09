@@ -1,16 +1,9 @@
-import Header from "@/components/layout/Header";
-import Hero from "@/components/sections/Hero";
+//Le page.tsx racine servira uniquement à rediriger vers la langue par défaut.
+
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-
-      <main>
-        <Hero />
-      </main>
-    </>
-  );
+  redirect("/en");
 }
 
 
@@ -29,3 +22,4 @@ Hero
 
 affiche
 */
+
