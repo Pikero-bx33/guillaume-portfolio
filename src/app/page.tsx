@@ -12,3 +12,20 @@ export default function Home() {
     </>
   );
 }
+
+
+/* 
+page.tsx
+
+↓
+
+charge les données
+
+↓
+
+Hero
+
+↓
+
+affiche
+*/
