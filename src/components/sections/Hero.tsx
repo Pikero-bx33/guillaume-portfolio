@@ -12,7 +12,7 @@ type HeroProps = {
 
 export default function Hero({ content }: HeroProps) {
   return (
-    <section className="flex min-h-[calc(100vh-72px)] items-center px-6 py-16">
+    <section className="flex min-h-[calc(100vh-72px)] items-center px-6 py-8">
       <div className="mx-auto w-full max-w-7xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-ocean">
           {content.eyebrow}
