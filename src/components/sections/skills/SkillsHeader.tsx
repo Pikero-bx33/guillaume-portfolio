@@ -1,0 +1,27 @@
+type SkillsHeaderProps = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
+export default function SkillsHeader({
+  eyebrow,
+  title,
+  description,
+}: SkillsHeaderProps) {
+  return (
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ocean">
+        {eyebrow}
+      </p>
+
+      <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-deep-blue sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
+
+      <p className="mt-5 text-base leading-7 text-muted sm:text-lg sm:leading-8">
+        {description}
+      </p>
+    </div>
+  );
+}

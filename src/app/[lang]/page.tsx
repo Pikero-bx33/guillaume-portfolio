@@ -4,14 +4,21 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/about/About";
 import Career from "@/components/sections/career/Career";
+import Skills from "@/components/sections/skills/Skills";
+import BusinessTech from "@/components/sections/business-tech/BusinessTech";
 
 import { heroContent } from "@/data/hero";
 import { aboutContent } from "@/data/about";
 import { experienceContent } from "@/data/experience";
+import { skillsContent } from "@/data/skills";
+import { businessTechContent } from "@/data/businessTech";
 
 import { navigation } from "@/lib/navigation";
 
 import type { Locale } from "@/types/locale";
+
+
+
 
 
 type HomePageProps = {
@@ -42,6 +49,8 @@ export default async function HomePage({ params }: HomePageProps) {
         <Hero content={heroContent[locale]} />
         <About content={aboutContent[locale]} />
         <Career content={experienceContent[locale]} />
+        <Skills content={skillsContent[locale]} />
+        <BusinessTech content={businessTechContent[locale]} />
       </main>
     </>
   );
