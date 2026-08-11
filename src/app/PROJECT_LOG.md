@@ -116,3 +116,52 @@ Separating content from presentation keeps components reusable and easier to mai
 - Projects
 - Project cards
 - Project detail pages
+
+# Sprint 4
+
+## Goal
+
+Build the Projects section to showcase featured work, learning projects and future ideas.
+
+## Completed
+
+- Built the Projects section
+- Created Featured Projects cards
+- Created Learning Projects cards
+- Created Coming Soon section
+- Introduced reusable project data models
+- Continued the bilingual architecture (FR / EN)
+
+## Architecture decisions
+
+- Featured, Learning and Coming Soon are treated as separate presentation components
+- Project data is fully separated from the UI
+- Section titles are stored in the data layer for internationalization
+- The project architecture remains consistent with previous sections
+
+## Learned
+
+- Designing scalable data models
+- Filtering data into multiple presentation layers
+- Building reusable card components
+- Maintaining a consistent architecture across the application
+
+## Interview question
+
+Why did you separate your projects into Featured Projects, Learning Projects and Coming Soon instead of displaying a single list?
+
+Suggested answer:
+
+I wanted visitors to immediately distinguish between production-level projects, learning exercises and future work. This improves readability and better reflects my learning journey while highlighting the projects that best represent my current skills.
+
+## Reflection
+
+The portfolio is no longer just a collection of sections. It is becoming a product with a coherent information architecture. Every new section follows the same design pattern, making the codebase easier to maintain and extend.
+
+## Next Sprint
+
+- Dynamic project pages
+- Project case studies
+- PrintForge case study
+- EcoProfs case study
+- Navigation between portfolio and project pages

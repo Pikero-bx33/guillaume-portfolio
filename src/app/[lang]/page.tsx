@@ -8,12 +8,12 @@ import Skills from "@/components/sections/skills/Skills";
 import BusinessTech from "@/components/sections/business-tech/BusinessTech";
 import Projects from "@/components/sections/projects/Projects";
 
-import { heroContent } from "@/data/hero";
-import { aboutContent } from "@/data/about";
-import { experienceContent } from "@/data/experience";
-import { skillsContent } from "@/data/skills";
-import { businessTechContent } from "@/data/businessTech";
-import { projectsContent } from "@/data/projects";
+import { heroContent } from "@/data/home/hero";
+import { aboutContent } from "@/data/home/about";
+import { experienceContent } from "@/data/home/experience";
+import { skillsContent } from "@/data/home/skills";
+import { businessTechContent } from "@/data/home/businessTech";
+import { projectsContent } from "@/data/home/projectsSection";
 
 import { navigation } from "@/lib/navigation";
 
