@@ -74,3 +74,45 @@ R: Chaque composant possède une responsabilité unique. Cette approche facilite
 - Skills
 - Business × Tech
 
+# Sprint 3
+
+## Goal
+
+Highlight my hybrid profile by presenting both my business expertise and my technical skills.
+
+## Completed
+
+- Built the Skills section
+- Built the Business × Tech section
+- Introduced reusable Skill and BusinessTech data models
+- Continued the data-driven architecture
+- Added bilingual content (FR / EN)
+
+## Architecture decisions
+
+- One section = one folder
+- One responsibility per component
+- Shared models stored in `types/`
+- Content stored in `data/`
+- Components remain presentation-only
+
+## Learned
+
+- Component composition
+- Reusable TypeScript models
+- Building reusable card-based layouts
+- Separating content from presentation
+
+## Interview question
+
+Why store all portfolio content in dedicated `data` files instead of directly inside React components?
+
+Suggested answer:
+
+Separating content from presentation keeps components reusable and easier to maintain. It also makes internationalization straightforward, since switching languages only changes the data source while the UI remains identical.
+
+## Next Sprint
+
+- Projects
+- Project cards
+- Project detail pages

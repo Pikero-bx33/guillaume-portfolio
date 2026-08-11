@@ -6,18 +6,18 @@ import About from "@/components/sections/about/About";
 import Career from "@/components/sections/career/Career";
 import Skills from "@/components/sections/skills/Skills";
 import BusinessTech from "@/components/sections/business-tech/BusinessTech";
+import Projects from "@/components/sections/projects/Projects";
 
 import { heroContent } from "@/data/hero";
 import { aboutContent } from "@/data/about";
 import { experienceContent } from "@/data/experience";
 import { skillsContent } from "@/data/skills";
 import { businessTechContent } from "@/data/businessTech";
+import { projectsContent } from "@/data/projects";
 
 import { navigation } from "@/lib/navigation";
 
 import type { Locale } from "@/types/locale";
-
-
 
 
 
@@ -51,6 +51,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <Career content={experienceContent[locale]} />
         <Skills content={skillsContent[locale]} />
         <BusinessTech content={businessTechContent[locale]} />
+        <Projects content={projectsContent[locale]} />
       </main>
     </>
   );
