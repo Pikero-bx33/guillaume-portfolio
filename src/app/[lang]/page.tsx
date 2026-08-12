@@ -51,7 +51,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <Career content={experienceContent[locale]} />
         <Skills content={skillsContent[locale]} />
         <BusinessTech content={businessTechContent[locale]} />
-        <Projects content={projectsContent[locale]} />
+        <Projects content={projectsContent[locale]} locale={locale} />
       </main>
     </>
   );

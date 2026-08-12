@@ -19,5 +19,13 @@ export type ProjectDetails = {
   nextSteps: string[];
 
   githubUrl?: string;
+
   liveUrl?: string;
+
+  role: string;
+
+  duration: string;
+
+  status: string;
+
 };

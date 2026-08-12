@@ -2,6 +2,16 @@ import { notFound } from "next/navigation";
 
 import { projects } from "@/data/projects";
 
+import ProjectHero from "@/components/project/ProjectHero";
+import ProjectOverview from "@/components/project/ProjectOverview";
+import ProjectObjectives from "@/components/project/ProjectObjectives";
+import ProjectTechStack from "@/components/project/ProjectTechStack";
+import ProjectArchitecture from "@/components/project/ProjectArchitecture";
+import ProjectChallenges from "@/components/project/ProjectChallenges";
+import ProjectLessons from "@/components/project/ProjectLessons";
+import ProjectNextSteps from "@/components/project/ProjectNextSteps";
+import ProjectMeta from "@/components/project/ProjectMeta";
+
 type ProjectPageProps = {
   params: Promise<{
     lang: string;
@@ -22,13 +32,30 @@ export default async function ProjectPage({
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
-      <h1 className="text-4xl font-bold text-deep-blue">
-        {project.title}
-      </h1>
+      <ProjectHero
+        title={project.title}
+        subtitle={project.subtitle}
+      />
 
-      <p className="mt-4 text-lg text-muted">
-        {project.subtitle}
-      </p>
+      <ProjectMeta
+        role={project.role}
+        duration={project.duration}
+        status={project.status}
+      />
+
+      <ProjectOverview overview={project.overview} />
+
+      <ProjectObjectives objectives={project.objectives} />
+
+      <ProjectTechStack techStack={project.techStack} />
+
+      <ProjectArchitecture architecture={project.architecture} />
+
+      <ProjectChallenges challenges={project.challenges} />
+
+      <ProjectLessons lessons={project.lessons} />
+
+      <ProjectNextSteps nextSteps={project.nextSteps} />
     </main>
   );
 }

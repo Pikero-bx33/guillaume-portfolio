@@ -4,12 +4,14 @@ import LearningProjects from "./LearningProjects";
 import ComingSoonProjects from "./ComingSoonProjects";
 
 import type { ProjectsSectionContent } from "@/types/project";
+import type { Locale } from "@/types/locale";
 
 type ProjectsProps = {
   content: ProjectsSectionContent;
+  locale: Locale
 };
 
-export default function Projects({ content }: ProjectsProps) {
+export default function Projects({ content, locale }: ProjectsProps) {
   const featuredProjects = content.projects.filter(
     (project) => project.status === "featured"
   );
@@ -31,7 +33,10 @@ export default function Projects({ content }: ProjectsProps) {
           description={content.description}
         />
 
-        <FeaturedProjects projects={featuredProjects} />
+        <FeaturedProjects
+          projects={featuredProjects}
+          locale={locale}
+        />
 
         <LearningProjects
           projects={learningProjects}
