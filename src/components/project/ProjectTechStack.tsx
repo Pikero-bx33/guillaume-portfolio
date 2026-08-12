@@ -1,14 +1,16 @@
 type ProjectTechStackProps = {
+  title: string;
   techStack: string[];
 };
 
 export default function ProjectTechStack({
+  title,
   techStack,
 }: ProjectTechStackProps) {
   return (
     <section className="border-t border-sand py-12">
       <h2 className="text-2xl font-bold text-deep-blue">
-        Tech Stack
+        {title}
       </h2>
 
       <div className="mt-6 flex flex-wrap gap-3">

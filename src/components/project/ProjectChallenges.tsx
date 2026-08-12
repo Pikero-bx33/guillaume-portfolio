@@ -1,14 +1,16 @@
 type ProjectChallengesProps = {
+  title: string;
   challenges: string[];
 };
 
 export default function ProjectChallenges({
+  title,
   challenges,
 }: ProjectChallengesProps) {
   return (
     <section className="border-t border-sand py-12">
       <h2 className="text-2xl font-bold text-deep-blue">
-        Challenges
+        {title}
       </h2>
 
       <div className="mt-6 space-y-4">

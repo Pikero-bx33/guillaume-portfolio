@@ -165,3 +165,56 @@ The portfolio is no longer just a collection of sections. It is becoming a produ
 - PrintForge case study
 - EcoProfs case study
 - Navigation between portfolio and project pages
+
+# Sprint 5
+
+## Goal
+
+Design and build a reusable case study system for portfolio projects.
+
+## Completed
+
+- Created a reusable project architecture
+- Added dynamic routing with Next.js App Router
+- Introduced the ProjectDetails data model
+- Implemented the first complete case study (PrintForge)
+- Created reusable project components
+- Added project metadata
+- Added reusable action buttons
+- Internationalised all case study labels
+- Prepared the architecture for future case studies
+
+## Architecture decisions
+
+- Project data is isolated inside `data/projects`
+- Shared UI labels are stored in `data/projects/ui.ts`
+- Each case study is composed of small reusable components
+- Dynamic routing allows adding new projects without changing page logic
+- The same architecture will be reused for every future project
+
+## Learned
+
+- Dynamic routing with App Router
+- Reusable page architecture
+- Separation between project content and UI labels
+- Better TypeScript modelling
+- Building scalable portfolio pages
+
+## Interview question
+
+Why did you create a reusable case study architecture instead of hardcoding each project page?
+
+Suggested answer:
+
+I wanted every project to follow the same structure while keeping the content independent from the UI. Adding a new project only requires creating a new data file, without modifying the page logic. This approach improves scalability, maintainability and consistency across the portfolio.
+
+## Reflection
+
+This sprint transformed the portfolio from a collection of pages into a scalable platform for presenting projects. Future case studies can now be added with minimal development effort.
+
+## Next Sprint
+
+- EcoProfs case study
+- Connect Featured Project cards
+- Improve project navigation
+- Prepare gallery support

@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 
 import { projects } from "@/data/projects";
 
+import { projectUi } from "@/data/projects/ui";
+import type { Locale } from "@/types/locale";
+
 import ProjectHero from "@/components/project/ProjectHero";
 import ProjectOverview from "@/components/project/ProjectOverview";
 import ProjectObjectives from "@/components/project/ProjectObjectives";
@@ -11,6 +14,9 @@ import ProjectChallenges from "@/components/project/ProjectChallenges";
 import ProjectLessons from "@/components/project/ProjectLessons";
 import ProjectNextSteps from "@/components/project/ProjectNextSteps";
 import ProjectMeta from "@/components/project/ProjectMeta";
+import ProjectKeyFeatures from "@/components/project/ProjectKeyFeatures";
+import ProjectActions from "@/components/project/ProjectActions";
+
 
 type ProjectPageProps = {
   params: Promise<{
@@ -22,7 +28,10 @@ type ProjectPageProps = {
 export default async function ProjectPage({
   params,
 }: ProjectPageProps) {
-  const { slug } = await params;
+  const { lang, slug } = await params;
+
+  const locale = lang as Locale;
+  const labels = projectUi[locale];
 
   const project = projects[slug];
 
@@ -33,29 +42,68 @@ export default async function ProjectPage({
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
       <ProjectHero
+        label={labels.caseStudy}
         title={project.title}
         subtitle={project.subtitle}
       />
 
       <ProjectMeta
+        roleLabel={labels.role}
+        durationLabel={labels.duration}
+        statusLabel={labels.status}
         role={project.role}
         duration={project.duration}
         status={project.status}
       />
 
-      <ProjectOverview overview={project.overview} />
+      <ProjectOverview
+        title={labels.overview}
+        overview={project.overview}
+      />
 
-      <ProjectObjectives objectives={project.objectives} />
+      <ProjectObjectives
+        title={labels.objectives}
+        objectives={project.objectives}
+      />
 
-      <ProjectTechStack techStack={project.techStack} />
+      <ProjectTechStack
+        title={labels.techStack}
+        techStack={project.techStack}
+      />
 
-      <ProjectArchitecture architecture={project.architecture} />
+      <ProjectKeyFeatures
+        title={labels.keyFeatures}
+        features={project.keyFeatures}
+      />
 
-      <ProjectChallenges challenges={project.challenges} />
+      <ProjectArchitecture
+        title={labels.architecture}
+        architecture={project.architecture}
+      />
 
-      <ProjectLessons lessons={project.lessons} />
+      <ProjectChallenges
+        title={labels.challenges}
+        challenges={project.challenges}
+      />
 
-      <ProjectNextSteps nextSteps={project.nextSteps} />
+      <ProjectLessons
+        title={labels.lessons}
+        lessons={project.lessons}
+      />
+
+      <ProjectNextSteps
+        title={labels.nextSteps}
+        nextSteps={project.nextSteps}
+      />
+
+      <ProjectActions
+        backLabel={labels.back}
+        githubLabel={labels.github}
+        demoLabel={labels.demo}
+        backHref={`/${locale}#projects`}
+        githubUrl={project.githubUrl}
+        liveUrl={project.liveUrl}
+      />
     </main>
   );
 }

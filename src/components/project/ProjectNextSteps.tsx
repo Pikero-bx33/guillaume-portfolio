@@ -1,14 +1,16 @@
 type ProjectNextStepsProps = {
+  title: string;
   nextSteps: string[];
 };
 
 export default function ProjectNextSteps({
+  title,
   nextSteps,
 }: ProjectNextStepsProps) {
   return (
     <section className="border-t border-sand py-12">
       <h2 className="text-2xl font-bold text-deep-blue">
-        If I rebuilt this project today...
+        {title}
       </h2>
 
       <ul className="mt-6 space-y-3">

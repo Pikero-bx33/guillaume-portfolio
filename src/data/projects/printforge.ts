@@ -36,6 +36,14 @@ export const printForgeProject: ProjectDetails = {
     "App Router",
   ],
 
+  keyFeatures: [
+    "Dynamic routes with Next.js App Router.",
+    "Search and category filtering.",
+    "Responsive pagination.",
+    "Reusable TypeScript components.",
+    "Mobile-first responsive design.",
+  ],
+
   architecture: [
     "Next.js App Router used for routing and page organisation.",
     "TypeScript used across the project to improve type safety.",
@@ -67,4 +75,6 @@ export const printForgeProject: ProjectDetails = {
     "Optimise images and overall performance.",
     "Deploy the application and add CI/CD.",
   ],
+
+  githubUrl: "https://github.com/Pikero-bx33/guillaume-portfolio",
 };

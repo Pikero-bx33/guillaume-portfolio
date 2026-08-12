@@ -28,4 +28,5 @@ export type ProjectDetails = {
 
   status: string;
 
+  keyFeatures: string[];
 };
