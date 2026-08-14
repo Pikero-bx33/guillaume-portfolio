@@ -8,10 +8,10 @@ export default function BusinessTechSteps({
   steps,
 }: BusinessTechStepsProps) {
   return (
-    <div className="mt-10 space-y-4">
+    <div className="mt-10 grid gap-4 lg:grid-cols-3">
       {steps.map((step, index) => (
         <div key={step.title}>
-          <article className="rounded-2xl border border-sand bg-surface p-6">
+          <article className="h-full rounded-2xl border border-sand bg-surface p-6">
             <p className="text-sm font-semibold text-ocean">
               0{index + 1}
             </p>
@@ -26,7 +26,7 @@ export default function BusinessTechSteps({
           </article>
 
           {index < steps.length - 1 && (
-            <div className="py-2 text-center text-xl text-ocean">
+            <div className="py-2 text-center text-xl text-ocean lg:hidden">
               ↓
             </div>
           )}

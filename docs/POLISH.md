@@ -39,3 +39,9 @@
 - [ ] Timeline
 - [ ] Testimonials
 - [ ] Download CV
+
+## Career details
+
+- [ ] Add "Learn more / En savoir plus" links to Career items
+- [ ] Create dynamic `/[lang]/experience/[slug]` pages
+- [ ] Add role details, missions, responsibilities and key achievements

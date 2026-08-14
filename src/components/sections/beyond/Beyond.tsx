@@ -9,7 +9,10 @@ type BeyondProps = {
 
 export default function Beyond({ content }: BeyondProps) {
   return (
-    <section id="beyond" className="px-6 py-16">
+    <section
+      id="beyond"
+      className="bg-surface px-6 py-16"
+    >
       <div className="mx-auto max-w-7xl">
         <BeyondHeader
           eyebrow={content.eyebrow}

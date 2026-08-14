@@ -11,7 +11,10 @@ export default function BusinessTech({
   content,
 }: BusinessTechProps) {
   return (
-    <section id="business-tech" className="px-6 py-12">
+    <section
+      id="business-tech"
+      className="bg-[#eef8f8] px-6 py-16"
+    >
       <div className="mx-auto max-w-7xl">
         <BusinessTechHeader
           eyebrow={content.eyebrow}

@@ -10,7 +10,10 @@ type AboutProps = {
 
 export default function About({ content }: AboutProps) {
   return (
-    <section id="about" className="px-6 py-10">
+    <section
+      id="about"
+      className="bg-surface px-6 py-12 sm:py-14"
+    >
       <div className="mx-auto max-w-7xl">
         <AboutHeader
           eyebrow={content.eyebrow}

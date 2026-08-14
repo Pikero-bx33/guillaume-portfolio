@@ -13,7 +13,7 @@ export default function FeaturedProjectCard({
   locale,
 }: FeaturedProjectCardProps) {
   const card = (
-    <article className="rounded-2xl border border-sand bg-surface p-6">
+    <article className="flex h-full flex-col rounded-2xl border border-sand bg-surface p-6">
       <p className="text-sm font-semibold text-ocean">
         {project.year}
       </p>
@@ -26,7 +26,7 @@ export default function FeaturedProjectCard({
         {project.description}
       </p>
 
-      <ul className="mt-5 flex flex-wrap gap-2">
+      <ul className="mt-auto flex flex-wrap gap-2 pt-5">
         {project.stack.map((technology) => (
           <li
             key={technology}
@@ -44,7 +44,10 @@ export default function FeaturedProjectCard({
   }
 
   return (
-    <Link href={`/${locale}/projects/${project.slug}`}>
+    <Link
+      href={`/${locale}/projects/${project.slug}`}
+      className="block h-full"
+    >
       {card}
     </Link>
   );

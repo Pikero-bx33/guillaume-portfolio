@@ -10,20 +10,20 @@ type HeroContent = {
 
 export const heroContent: Record<Locale, HeroContent> = {
   en: {
-    eyebrow: "Business × E-commerce × Tech",
-    title: "I bridge business, digital commerce and technology.",
+    eyebrow: "Business minded. Tech empowered.",
+    title: "Business meets code.",
     description:
-      "15+ years of experience in e-commerce and business development, combined with hands-on web development skills in React, Next.js and TypeScript.",
-    primaryCta: "View my work",
+      "I help businesses grow by connecting strategy, digital commerce and technology to build impactful solutions.",
+    primaryCta: "Discover my work",
     secondaryCta: "About me",
   },
 
   fr: {
-    eyebrow: "Business × E-commerce × Tech",
-    title: "Je crée des ponts entre business, e-commerce et technologie.",
+    eyebrow: "Business minded. Tech empowered.",
+    title: "Quand le business rencontre le code.",
     description:
-      "Plus de 15 ans d'expérience dans l'e-commerce et le business development, complétés aujourd'hui par des compétences concrètes en développement web avec React, Next.js et TypeScript.",
-    primaryCta: "Voir mes projets",
+      "J'aide les entreprises à connecter stratégie, commerce digital et technologie pour construire des solutions à impact.",
+    primaryCta: "Découvrir mes projets",
     secondaryCta: "À propos",
   },
 };

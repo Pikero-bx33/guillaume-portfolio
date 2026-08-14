@@ -323,3 +323,82 @@ The Home page structure is now complete. The portfolio has evolved from a techni
 - Project screenshots and galleries
 - Micro-interactions and animations
 - Accessibility review
+
+# Sprint 8 — Responsive Design & Visual Polish
+
+## Goal
+
+Improve the portfolio's responsive behavior and strengthen its visual identity across mobile, tablet, laptop and desktop.
+
+## Completed
+
+### Responsive Design
+
+- Audited the complete Home page at 375px, 768px, 1024px and 1440px
+- Improved spacing between Header, Hero and About
+- Added clearer visual separation between sections using subtle background variations
+- Improved Contact button layout across breakpoints
+- Standardized Featured Project card heights
+- Changed Business × Tech cards to a horizontal layout on larger screens
+- Changed the Career timeline to a horizontal layout from 1024px
+- Preserved vertical layouts where they provide better readability on smaller screens
+
+### Header
+
+- Reworked the Header layout
+- Replaced the temporary GL logo with a simpler Guillaume Legros identity
+- Added the "Business × Code" signature
+- Moved the language switch closer to the navigation
+- Improved the visual treatment of the FR / EN switch
+- Added a responsive mobile navigation menu
+- Introduced local state to open and close the mobile menu
+- Converted the Header into a Client Component for interactive behavior
+
+### Hero
+
+- Redesigned the Hero as a true two-column hero section
+- Improved typography hierarchy and CTA presentation
+- Added a dedicated portrait area
+- Created a stylized illustrated portrait consistent with the portfolio identity
+- Added blue graphic / brush elements to the portrait
+- Prepared a transparent cutout version for better Hero integration
+- Improved portrait sizing across responsive breakpoints
+- Changed the Hero to a two-column layout from tablet size
+
+## Architecture / Technical Decisions
+
+- Keep responsive behavior primarily controlled through Tailwind breakpoints
+- Use `md` for the Hero two-column transition
+- Use `lg` for larger structural changes such as the horizontal Career timeline
+- Keep visual content separate from textual project data
+- Use `next/image` for the Hero portrait
+- Keep the mobile Header interaction isolated inside the Header Client Component
+
+## Learned
+
+- Responsive design is not only about making elements smaller, but changing layout according to available space
+- Breakpoints should reflect content needs rather than device names
+- Large visual elements such as portraits require different sizing strategies across breakpoints
+- `useState` and `"use client"` are required when a Server Component needs browser-side interaction
+- Visual section separation can improve readability without adding unnecessary UI elements
+
+## Backlog
+
+- Add "Learn more / En savoir plus" links to Career timeline items
+- Create detailed experience pages using `/[lang]/experience/[slug]`
+- Add real photography to Beyond the Screen
+- Add project screenshots / galleries to case studies
+- Finalize Header visual identity / possible logo
+- Add subtle micro-interactions
+- Accessibility review
+- Final visual consistency review
+
+## Next
+
+Continue Sprint 8 with visual polish:
+
+- Beyond the Screen photography
+- Project screenshots
+- Micro-interactions
+- Accessibility
+- Final UI consistency

@@ -25,7 +25,10 @@ export default function Projects({ content, locale }: ProjectsProps) {
   );
 
   return (
-    <section id="projects" className="px-6 py-12">
+    <section
+      id="projects"
+      className="bg-background px-6 py-16"
+    >
       <div className="mx-auto max-w-7xl">
         <ProjectsHeader
           eyebrow={content.eyebrow}
