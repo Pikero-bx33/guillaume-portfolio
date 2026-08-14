@@ -7,6 +7,9 @@ import Career from "@/components/sections/career/Career";
 import Skills from "@/components/sections/skills/Skills";
 import BusinessTech from "@/components/sections/business-tech/BusinessTech";
 import Projects from "@/components/sections/projects/Projects";
+import Beyond from "@/components/sections/beyond/Beyond";
+import Contact from "@/components/sections/contact/Contact";
+import Footer from "@/components/layout/Footer";
 
 import { heroContent } from "@/data/home/hero";
 import { aboutContent } from "@/data/home/about";
@@ -14,6 +17,11 @@ import { experienceContent } from "@/data/home/experience";
 import { skillsContent } from "@/data/home/skills";
 import { businessTechContent } from "@/data/home/businessTech";
 import { projectsContent } from "@/data/home/projectsSection";
+import { beyondContent } from "@/data/home/hobbies";
+import { contactContent } from "@/data/home/contact";
+import { footerContent } from "@/data/home/footer";
+
+
 
 import { navigation } from "@/lib/navigation";
 
@@ -52,6 +60,13 @@ export default async function HomePage({ params }: HomePageProps) {
         <Skills content={skillsContent[locale]} />
         <BusinessTech content={businessTechContent[locale]} />
         <Projects content={projectsContent[locale]} locale={locale} />
+        <Beyond content={beyondContent[locale]} />
+        <Contact content={contactContent[locale]} />
+
+        <Footer
+          tagline={footerContent[locale].tagline}
+          backToTop={footerContent[locale].backToTop}
+        />
       </main>
     </>
   );

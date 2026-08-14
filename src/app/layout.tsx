@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
+      id="top"
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >

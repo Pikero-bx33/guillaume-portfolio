@@ -268,3 +268,58 @@ The value of the reusable architecture became very clear in this sprint. EcoProf
 - Footer
 - Social links
 - CV download preparation
+
+# Sprint 7
+
+## Goal
+
+Complete the portfolio Home page with personal context, contact information and final navigation.
+
+## Completed
+
+- Added the Beyond the Screen section
+- Added Surf, Scuba Diving, Sport & Fitness and Science & Curiosity interests
+- Added bilingual content for the new sections
+- Added the Contact section
+- Added Email, LinkedIn and GitHub actions
+- Added the Footer
+- Added Back to Top navigation
+- Completed Header navigation across all Home sections
+- Verified anchor navigation in English and French
+
+## Architecture decisions
+
+- Beyond and Contact follow the existing data-driven architecture
+- Content remains separated from presentation components
+- Hobby and contact data have dedicated TypeScript models
+- Footer remains a layout component
+- Navigation anchors map directly to section IDs
+
+## Learned
+
+- Building reusable data-driven sections
+- Managing internal anchor navigation
+- Separating layout components from page sections
+- Maintaining bilingual content across new features
+
+## Interview question
+
+How do you manage content and UI responsibilities in the portfolio?
+
+Suggested answer:
+
+I separate content, TypeScript models and presentation components. The data layer contains the content, types define the contracts, and React components are responsible for rendering. This makes the application easier to maintain, internationalise and extend.
+
+## Reflection
+
+The Home page structure is now complete. The portfolio has evolved from a technical showcase into a more complete presentation of both professional experience and personal interests.
+
+## Next Sprint
+
+- Global responsive review
+- Desktop improvements
+- Visual consistency
+- Beyond the Screen photography
+- Project screenshots and galleries
+- Micro-interactions and animations
+- Accessibility review
