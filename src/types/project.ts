@@ -12,6 +12,7 @@ export type Project = {
   year: number;
   githubUrl?: string;
   liveUrl?: string;
+  hasCaseStudy?: boolean
 };
 
 export type ProjectsSectionContent = {

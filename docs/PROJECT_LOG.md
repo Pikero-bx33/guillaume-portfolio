@@ -218,3 +218,53 @@ This sprint transformed the portfolio from a collection of pages into a scalable
 - Connect Featured Project cards
 - Improve project navigation
 - Prepare gallery support
+
+# Sprint 6
+
+## Goal
+
+Reuse the case study system to add EcoProfs without rebuilding the project page architecture.
+
+## Completed
+
+- Added EcoProfs as a full case study
+- Reused the existing ProjectDetails model
+- Added EcoProfs to the project registry
+- Added GitHub support
+- Introduced `hasCaseStudy` to control project card navigation
+- Added the Portfolio as a Featured Project
+- Improved the distinction between Home project data and detailed case study data
+
+## Architecture decisions
+
+- `data/home/projectsSection.ts` controls the project cards displayed on the Home page
+- `data/projects/*.ts` contains detailed case study content
+- `data/projects/index.ts` acts as the central project registry
+- `hasCaseStudy` determines whether a Featured Project card links to a detail page
+
+## Learned
+
+- Reusing a generic page architecture
+- Building a simple static project registry
+- Separating summary data from detailed domain data
+- Making navigation data-driven
+
+## Interview question
+
+What is the purpose of the project registry in `data/projects/index.ts`?
+
+Suggested answer:
+
+The registry maps a URL slug to its corresponding project data. This allows the dynamic `[slug]` route to remain generic and independent from individual projects. Adding a new case study only requires creating its data file and registering it.
+
+## Reflection
+
+The value of the reusable architecture became very clear in this sprint. EcoProfs could be added without creating new page components or changing the dynamic routing logic.
+
+## Next Sprint
+
+- Beyond the Screen
+- Contact
+- Footer
+- Social links
+- CV download preparation

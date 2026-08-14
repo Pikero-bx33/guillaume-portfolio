@@ -20,6 +20,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Modern marketplace showcase built with Next.js App Router.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
+        hasCaseStudy: true,
       },
 
       {
@@ -30,6 +31,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Educational marketplace MVP built with React Native and Express.",
         stack: ["React Native", "Expo", "Express", "MongoDB"],
         status: "featured",
+        hasCaseStudy: true,
       },
 
       {
@@ -40,6 +42,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Generate recipes from available ingredients using AI.",
         stack: ["React", "Claude AI"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -50,6 +53,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Hangman-inspired game focused on React logic.",
         stack: ["React"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -60,6 +64,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Dice game exploring React state management.",
         stack: ["React"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -70,6 +75,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "AI-assisted task manager.",
         stack: ["React Native", "Expo"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -80,6 +86,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Quiz application built with Next.js.",
         stack: ["Next.js", "TypeScript"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -90,6 +97,18 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "AI-powered news aggregation platform currently in development.",
         stack: ["React Native", "TypeScript", "Express", "MongoDB"],
         status: "coming-soon",
+        hasCaseStudy: false,
+      },
+
+      {
+        slug: "portfolio",
+        year: 2026,
+        title: "Personal Portfolio",
+        description:
+          "A bilingual Next.js portfolio designed as a scalable platform to present projects, experience and a hybrid business-tech profile.",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+        status: "featured",
+        hasCaseStudy: false,
       },
     ],
   },
@@ -112,6 +131,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Vitrine moderne réalisée avec Next.js App Router.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
+        hasCaseStudy: true,
       },
 
       {
@@ -122,6 +142,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "MVP d'une marketplace dédiée aux enseignants.",
         stack: ["React Native", "Expo", "Express", "MongoDB"],
         status: "featured",
+        hasCaseStudy: true,
       },
 
       {
@@ -132,6 +153,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Génération de recettes grâce à l'IA.",
         stack: ["React", "Claude AI"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -142,6 +164,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Jeu inspiré du pendu pour travailler la logique React.",
         stack: ["React"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -152,6 +175,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Jeu de dés pour approfondir la gestion du state React.",
         stack: ["React"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -162,6 +186,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Application de gestion de tâches assistée par IA.",
         stack: ["React Native", "Expo"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -172,6 +197,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Application de quiz développée avec Next.js.",
         stack: ["Next.js", "TypeScript"],
         status: "learning",
+        hasCaseStudy: false,
       },
 
       {
@@ -182,6 +208,19 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Agrégateur de news enrichi par IA en cours de développement.",
         stack: ["React Native", "TypeScript", "Express", "MongoDB"],
         status: "coming-soon",
+        hasCaseStudy: false,
+      },
+
+      {
+        slug: "portfolio",
+        year: 2026,
+        title: "Portfolio personnel",
+        description:
+          "Un portfolio bilingue en Next.js conçu comme une plateforme évolutive pour présenter projets, parcours et profil hybride business-tech.",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+        status: "featured",
+        hasCaseStudy: false,
+
       },
     ],
   },

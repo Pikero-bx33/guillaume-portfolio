@@ -77,4 +77,5 @@ export const printForgeProject: ProjectDetails = {
   ],
 
   githubUrl: "https://github.com/Pikero-bx33/guillaume-portfolio",
+
 };
