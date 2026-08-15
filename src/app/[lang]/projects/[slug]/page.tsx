@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+import type { Metadata } from "next";
+
 import { projects } from "@/data/projects";
 
 import { projectUi } from "@/data/projects/ui";
@@ -24,6 +26,25 @@ type ProjectPageProps = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const project = projects[slug];
+
+  if (!project) {
+    return {
+      title: "Project",
+    };
+  }
+
+  return {
+    title: project.title,
+    description: project.subtitle,
+  };
+}
 
 export default async function ProjectPage({
   params,

@@ -14,7 +14,7 @@ export default function Footer({
       <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-sand pt-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-deep-blue">
-            Guillaume
+            Guillaume Legros
           </p>
 
           <p className="mt-1 text-sm text-muted">

@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+import type { Metadata } from "next";
+
 import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/about/About";
@@ -36,6 +38,26 @@ type HomePageProps = {
 };
 
 const locales: Locale[] = ["en", "fr"];
+
+export async function generateMetadata({
+  params,
+}: HomePageProps): Promise<Metadata> {
+  const { lang } = await params;
+
+  if (lang === "fr") {
+    return {
+      title: "Portfolio",
+      description:
+        "Portfolio de Guillaume Legros — profil hybride business, e-commerce et développement web.",
+    };
+  }
+
+  return {
+    title: "Portfolio",
+    description:
+      "Portfolio of Guillaume Legros — combining business, e-commerce and web development.",
+  };
+}
 
 export default async function HomePage({ params }: HomePageProps) {
   const { lang } = await params;

@@ -13,9 +13,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Guillaume | Business × E-commerce × Tech",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  ),
+
+  title: {
+    default: "Guillaume Legros | Business × Code",
+    template: "%s | Guillaume Legros",
+  },
+
   description:
-    "Portfolio combining e-commerce, business development and web development.",
+    "Portfolio of Guillaume Legros — combining e-commerce, business development and web development.",
+
+  keywords: [
+    "Guillaume Legros",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "E-commerce",
+    "Marketplace",
+    "Business Development",
+    "Web Developer",
+    "Digital marketing",
+  ],
+
+  authors: [
+    {
+      name: "Guillaume Legros",
+    },
+  ],
+
+  creator: "Guillaume Legros",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
