@@ -402,3 +402,66 @@ Continue Sprint 8 with visual polish:
 - Micro-interactions
 - Accessibility
 - Final UI consistency
+
+### Beyond the Screen
+
+- Redesigned the Beyond the Screen section with visual content
+- Added dedicated images for Surf, Scuba Diving, Sport & Fitness and Science & Curiosity
+- Updated the Hobby data model to support images and alternative text
+- Added responsive image rendering with Next.js Image
+- Added subtle hover interactions to Hobby cards
+- Introduced individual `objectPosition` settings for better image framing
+- Adjusted image positioning independently for different source photographs
+
+### Project Galleries
+
+- Created a reusable `ProjectGallery` component
+- Extended the `ProjectDetails` model with optional gallery data
+- Added bilingual gallery labels
+- Added screenshots to the PrintForge case study
+- Added screenshots to the EcoProfs case study
+- Added support for both landscape and portrait screenshots
+- Improved mobile screenshot rendering without affecting desktop screenshots
+- Kept gallery content entirely data-driven
+
+### Responsive Typography
+
+- Improved Hero title width at laptop and desktop breakpoints
+- Improved French Hero title wrapping
+- Allowed About titles to use more horizontal space from tablet size
+- Improved Skills title width at larger breakpoints
+- Improved Projects title width at larger breakpoints
+- Improved Business × Tech title width on desktop
+- Preserved mobile typography and readability
+
+## Additional Architecture Decisions
+
+- Project galleries remain optional through `gallery?: ProjectImage[]`
+- Screenshot orientation is defined in project data rather than inside the UI component
+- Individual hobby image framing is controlled through data
+- Shared components remain independent from specific projects and images
+- Visual customization should be configurable through data whenever possible
+
+## Additional Learned
+
+- `object-cover` preserves a container layout but may require individual `object-position` adjustments
+- Different screenshot formats should not be forced into the same aspect ratio
+- Optional data allows reusable components to support richer projects without affecting simpler ones
+- Responsive typography sometimes requires changing content width rather than simply reducing font size
+- A data-driven architecture can also manage visual presentation metadata such as image orientation and positioning
+
+## Sprint 8 Status
+
+Responsive design: ✅  
+Header & Hero redesign: ✅  
+Beyond the Screen visuals: ✅  
+Project galleries: ✅  
+Responsive typography: ✅  
+
+Remaining:
+
+- Micro-interactions and consistent hover states
+- Keyboard focus states
+- Accessibility review
+- Mobile navigation review
+- Final visual consistency review

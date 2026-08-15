@@ -92,5 +92,32 @@ export const ecoProfsProject: ProjectDetails = {
     "Deploy a production-ready backend and mobile build.",
   ],
 
+  gallery: [
+    {
+      src: "/images/projects/ecoprofs/login.png",
+      alt: "EcoProfs authentication screen",
+      caption: "Authentication and educational email validation",
+      aspect: "portrait",
+    },
+    {
+      src: "/images/projects/ecoprofs/home.png",
+      alt: "EcoProfs marketplace home screen",
+      caption: "Marketplace home and classified ads",
+      aspect: "portrait",
+    },
+    {
+      src: "/images/projects/ecoprofs/publish.png",
+      alt: "EcoProfs ad publishing flow",
+      caption: "Ad creation and image upload workflow",
+      aspect: "portrait",
+    },
+    {
+      src: "/images/projects/ecoprofs/search.png",
+      alt: "EcoProfs search screen",
+      caption: "Search, filters and location-based discovery",
+      aspect: "portrait",
+    },
+  ],
+
   githubUrl: "TON_URL_GITHUB_ECOPROFS",
 };

@@ -17,6 +17,7 @@ export const projectUi = {
     back: "Back to portfolio",
     github: "GitHub",
     demo: "Live Demo",
+    gallery: "Project Gallery",
   },
 
   fr: {
@@ -35,5 +36,6 @@ export const projectUi = {
     back: "Retour au portfolio",
     github: "GitHub",
     demo: "Démo",
+    gallery: "Galerie du projet",
   },
 } satisfies Record<Locale, Record<string, string>>;

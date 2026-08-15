@@ -16,7 +16,7 @@ import ProjectNextSteps from "@/components/project/ProjectNextSteps";
 import ProjectMeta from "@/components/project/ProjectMeta";
 import ProjectKeyFeatures from "@/components/project/ProjectKeyFeatures";
 import ProjectActions from "@/components/project/ProjectActions";
-
+import ProjectGallery from "@/components/project/ProjectGallery";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -95,6 +95,13 @@ export default async function ProjectPage({
         title={labels.nextSteps}
         nextSteps={project.nextSteps}
       />
+
+      {project.gallery && (
+        <ProjectGallery
+          title={labels.gallery}
+          images={project.gallery}
+        />
+      )}
 
       <ProjectActions
         backLabel={labels.back}

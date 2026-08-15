@@ -76,6 +76,27 @@ export const printForgeProject: ProjectDetails = {
     "Deploy the application and add CI/CD.",
   ],
 
+  gallery: [
+    {
+      src: "/images/projects/printforge/home.png",
+      alt: "PrintForge homepage",
+      caption: "Homepage and main navigation",
+      aspect: "landscape",
+    },
+    {
+      src: "/images/projects/printforge/about.png",
+      alt: "PrintForge 3D models page",
+      caption: "Models listing with filters and pagination",
+      aspect: "landscape",
+    },
+    {
+      src: "/images/projects/printforge/mobile.png",
+      alt: "PrintForge mobile view",
+      caption: "Responsive mobile layout",
+      aspect: "portrait",
+    },
+  ],
+
   githubUrl: "https://github.com/Pikero-bx33/guillaume-portfolio",
 
 };
