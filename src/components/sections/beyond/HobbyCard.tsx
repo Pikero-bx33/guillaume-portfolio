@@ -10,7 +10,7 @@ export default function HobbyCard({
   hobby,
 }: HobbyCardProps) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-sand bg-surface shadow-sm transition-transform duration-300 hover:-translate-y-1">
+    <article className="overflow-hidden rounded-2xl border border-sand bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
           src={hobby.image}

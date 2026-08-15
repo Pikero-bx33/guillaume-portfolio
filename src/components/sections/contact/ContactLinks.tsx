@@ -15,15 +15,7 @@ export default function ContactLinks({
           href={link.href}
           target={link.external ? "_blank" : undefined}
           rel={link.external ? "noopener noreferrer" : undefined}
-          className="
-              flex items-center justify-center
-              rounded-full bg-white
-              px-2 py-3
-              text-sm font-semibold text-deep-blue
-              transition-all
-              hover:-translate-y-0.5 hover:opacity-90
-              sm:px-6
-            "
+          className="flex items-center justify-center rounded-full bg-white px-2 py-3 text-sm font-semibold text-deep-blue transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-aqua focus-visible:ring-offset-2 focus-visible:ring-offset-deep-blue sm:px-6"
         >
           {link.label}
         </a>

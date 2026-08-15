@@ -85,7 +85,7 @@ export const printForgeProject: ProjectDetails = {
     },
     {
       src: "/images/projects/printforge/about.png",
-      alt: "PrintForge 3D models page",
+      alt: "PrintForge about page",
       caption: "Models listing with filters and pagination",
       aspect: "landscape",
     },

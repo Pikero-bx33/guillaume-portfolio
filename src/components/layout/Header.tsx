@@ -49,6 +49,7 @@ export default function Header({
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-sand text-deep-blue"
           >
             <span className="text-xl">
@@ -65,7 +66,7 @@ export default function Header({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm font-medium text-deep-blue transition-colors hover:text-ocean"
+                    className="rounded-sm text-sm font-medium text-deep-blue transition-colors hover:text-ocean focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
                   >
                     {item.label}
                   </Link>
@@ -76,7 +77,7 @@ export default function Header({
 
           <Link
             href={`/${alternateLocale}`}
-            className="rounded-full border border-ocean px-4 py-2 text-xs font-semibold uppercase text-deep-blue transition-colors hover:bg-ocean hover:text-white"
+            className="rounded-full border border-ocean px-4 py-2 text-xs font-semibold uppercase text-deep-blue transition-all hover:bg-ocean hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
           >
             {alternateLocale}
           </Link>
@@ -84,6 +85,7 @@ export default function Header({
       </div>
       {isMenuOpen && (
         <nav
+          id="mobile-navigation"
           aria-label="Mobile navigation"
           className="border-t border-sand bg-surface px-6 py-5 md:hidden"
         >

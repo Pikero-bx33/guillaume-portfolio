@@ -34,7 +34,7 @@ export default function Hero({ content }: HeroProps) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="#projects"
-              className="inline-flex items-center justify-center rounded-xl bg-deep-blue px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-xl bg-deep-blue px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-ocean focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
             >
               {content.primaryCta}
               <span className="ml-2">→</span>
@@ -42,7 +42,7 @@ export default function Hero({ content }: HeroProps) {
 
             <Link
               href="#about"
-              className="inline-flex items-center justify-center rounded-xl border border-ocean px-6 py-3 text-sm font-semibold text-deep-blue transition-colors hover:bg-ocean hover:text-white"
+              className="inline-flex items-center justify-center rounded-xl border border-ocean px-6 py-3 text-sm font-semibold text-deep-blue transition-all duration-200 hover:-translate-y-0.5 hover:bg-ocean hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
             >
               {content.secondaryCta}
             </Link>

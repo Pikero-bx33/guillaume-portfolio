@@ -13,7 +13,7 @@ export default function FeaturedProjectCard({
   locale,
 }: FeaturedProjectCardProps) {
   const card = (
-    <article className="flex h-full flex-col rounded-2xl border border-sand bg-surface p-6">
+    <article className="flex h-full flex-col rounded-2xl border border-sand bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
       <p className="text-sm font-semibold text-ocean">
         {project.year}
       </p>
@@ -46,7 +46,7 @@ export default function FeaturedProjectCard({
   return (
     <Link
       href={`/${locale}/projects/${project.slug}`}
-      className="block h-full"
+      className="block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
     >
       {card}
     </Link>
