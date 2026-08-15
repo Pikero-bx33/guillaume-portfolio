@@ -11,22 +11,32 @@ export const beyondContent: Record<Locale, BeyondContent> = {
       {
         title: "Surf",
         description:
-          "Patience, adaptability and learning to work with changing conditions.",
+          "Chasing waves is my ultimate reset. It teaches me patience, focus and adaptability.",
+        image: "/images/hobbies/surf.jpg",
+        alt: "Surfing on a wave",
       },
       {
         title: "Scuba Diving",
         description:
-          "Preparation, focus and curiosity for an environment that demands calm and precision.",
+          "Exploring the underwater world brings perspective, focus and curiosity.",
+        image: "/images/hobbies/scuba.jpg",
+        alt: "Scuba diving underwater",
+        objectPosition: "center 30%",
       },
       {
         title: "Sport & Fitness",
         description:
-          "Consistency, discipline and the satisfaction of progressing over time.",
+          "Training keeps me disciplined, consistent and focused on long-term progress.",
+        image: "/images/hobbies/fitness.jpg",
+        alt: "Fitness training",
+        objectPosition: "center 5%",
       },
       {
         title: "Science & Curiosity",
         description:
-          "I enjoy science communication, astronomy and cosmology — especially understanding complex ideas in simple terms.",
+          "I enjoy science communication, astronomy and cosmology, especially making complex ideas easier to understand.",
+        image: "/images/hobbies/science.jpg",
+        alt: "Astronomy and scientific curiosity",
       },
     ],
   },
@@ -40,22 +50,32 @@ export const beyondContent: Record<Locale, BeyondContent> = {
       {
         title: "Surf",
         description:
-          "Patience, adaptation et apprentissage dans un environnement en mouvement permanent.",
+          "Le surf est mon meilleur moyen de déconnecter. Il demande patience, concentration et adaptation.",
+        image: "/images/hobbies/surf.jpg",
+        alt: "Surf sur une vague",
       },
       {
         title: "Plongée sous-marine",
         description:
-          "Préparation, concentration et curiosité pour un environnement qui demande calme et précision.",
+          "Explorer le monde sous-marin apporte perspective, concentration et curiosité.",
+        image: "/images/hobbies/scuba.jpg",
+        alt: "Plongée sous-marine",
+        objectPosition: "center 30%",
       },
       {
         title: "Sport & Fitness",
         description:
-          "Régularité, discipline et satisfaction de progresser dans le temps.",
+          "L'entraînement m'apporte discipline, régularité et goût de la progression.",
+        image: "/images/hobbies/fitness.jpg",
+        alt: "Entraînement sportif",
+        objectPosition: "center 5%",
       },
       {
         title: "Science & Curiosité",
         description:
           "J'aime la vulgarisation scientifique, l'astronomie et la cosmologie, notamment comprendre simplement des sujets complexes.",
+        image: "/images/hobbies/science.jpg",
+        alt: "Astronomie et curiosité scientifique",
       },
     ],
   },
