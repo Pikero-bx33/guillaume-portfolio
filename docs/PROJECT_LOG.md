@@ -472,3 +472,62 @@ The visual hierarchy has been strengthened through improved section backgrounds,
 Interactive elements now provide consistent hover and keyboard focus feedback, while project galleries and personal imagery make the portfolio more visual and engaging.
 
 The next phase can focus on content completion, deployment and production readiness.
+
+# Sprint 9 — Production & Deployment
+
+## Goal
+
+Prepare the portfolio for production and deploy a public version.
+
+## Completed
+
+- Added global SEO metadata
+- Added dynamic metadata for FR / EN pages
+- Added dynamic metadata for project case studies
+- Added custom favicon
+- Added Open Graph image
+- Added `robots.ts`
+- Added `sitemap.ts`
+- Added `metadataBase`
+- Added downloadable CVs in English and French
+- Verified production build with `npm run build`
+- Tested the production server locally
+- Deployed the portfolio on Vercel
+- Configured `NEXT_PUBLIC_SITE_URL`
+- Verified production `robots.txt`
+- Verified production `sitemap.xml`
+
+## Architecture decisions
+
+- Production URL is configured through an environment variable
+- Local development keeps its own `.env.local`
+- SEO metadata remains data-driven where possible
+- CV files are served from the `public/` directory
+- FR and EN routes provide their own metadata and CV documents
+
+## Learned
+
+- Difference between development and production builds
+- Managing environment variables across local and production environments
+- Next.js Metadata API
+- Open Graph configuration
+- Search engine metadata routes
+- Deployment workflow with GitHub and Vercel
+
+## Interview question
+
+How did you prepare your Next.js application for production?
+
+Suggested answer:
+
+I validated the production build locally, configured SEO metadata, Open Graph assets, sitemap and robots files, separated local and production environment variables, and deployed the application through Vercel connected to GitHub.
+
+## Reflection
+
+This sprint moved the project from a local development application to a publicly accessible production portfolio. The project now has a complete development-to-deployment workflow.
+
+## Production
+
+URL:
+
+https://guillaume-legros.vercel.app
