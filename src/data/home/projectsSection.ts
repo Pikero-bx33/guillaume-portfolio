@@ -4,9 +4,9 @@ import type { ProjectsSectionContent } from "@/types/project";
 export const projectsContent: Record<Locale, ProjectsSectionContent> = {
   en: {
     eyebrow: "Projects",
-    title: "Selected work & experiments.",
+    title: "Selected projects & learning builds.",
     description:
-      "A selection of projects ranging from larger applications to smaller learning experiments.",
+      "From full applications to focused learning projects, each build is an opportunity to turn ideas into working products and strengthen my technical skills.",
     learningTitle: "Learning Projects",
     comingSoonTitle: "Coming Soon",
     inProgressLabel: "In Progress",
@@ -17,7 +17,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "PrintForge",
         description:
-          "Modern marketplace showcase built with Next.js App Router.",
+          "Responsive 3D model marketplace showcase built with Next.js App Router and TypeScript.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
         hasCaseStudy: true,
@@ -28,7 +28,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "EcoProfs",
         description:
-          "Educational marketplace MVP built with React Native and Express.",
+          "Marketplace MVP for primary school teachers, built with React Native and an Express/MongoDB backend.",
         stack: ["React Native", "Expo", "Express", "MongoDB"],
         status: "featured",
         hasCaseStudy: true,
@@ -39,7 +39,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Chef Claude",
         description:
-          "Generate recipes from available ingredients using AI.",
+          "AI-powered recipe generator built to practice API integration and React state.",
         stack: ["React", "Claude AI"],
         status: "learning",
         hasCaseStudy: false,
@@ -50,7 +50,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Assembly: End Game",
         description:
-          "Hangman-inspired game focused on React logic.",
+          "Hangman-inspired game built to strengthen React logic and state management.",
         stack: ["React"],
         status: "learning",
         hasCaseStudy: false,
@@ -61,7 +61,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Tenzies",
         description:
-          "Dice game exploring React state management.",
+          "Interactive dice game focused on React state and component logic.",
         stack: ["React"],
         status: "learning",
         hasCaseStudy: false,
@@ -72,7 +72,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Todo AI",
         description:
-          "AI-assisted task manager.",
+          "Mobile task management project exploring React Native and AI-assisted features.",
         stack: ["React Native", "Expo"],
         status: "learning",
         hasCaseStudy: false,
@@ -83,7 +83,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Quizzical",
         description:
-          "Quiz application built with Next.js.",
+          "Quiz application built with Next.js and TypeScript to practice application logic.",
         stack: ["Next.js", "TypeScript"],
         status: "learning",
         hasCaseStudy: false,
@@ -105,7 +105,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Personal Portfolio",
         description:
-          "A bilingual Next.js portfolio designed as a scalable platform to present projects, experience and a hybrid business-tech profile.",
+          "Bilingual Next.js portfolio built as a scalable platform to connect my business, digital and technical experience.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
         hasCaseStudy: false,
@@ -115,9 +115,9 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
 
   fr: {
     eyebrow: "Projets",
-    title: "Projets sélectionnés & expérimentations.",
+    title: "Projets sélectionnés & projets d'apprentissage.",
     description:
-      "Une sélection de projets allant d'applications complètes à des projets d'apprentissage.",
+      "Des applications complètes aux projets plus ciblés, chaque réalisation me permet de transformer une idée en produit fonctionnel et de renforcer mes compétences techniques.",
     learningTitle: "Projets d'apprentissage",
     comingSoonTitle: "À venir",
     inProgressLabel: "En cours",
@@ -128,7 +128,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "PrintForge",
         description:
-          "Vitrine moderne réalisée avec Next.js App Router.",
+          "Vitrine responsive d'une marketplace de modèles 3D développée avec Next.js App Router et TypeScript.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
         hasCaseStudy: true,
@@ -139,7 +139,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "EcoProfs",
         description:
-          "MVP d'une marketplace dédiée aux enseignants.",
+          "MVP d'une marketplace dédiée aux enseignants du primaire, développée en React Native avec un backend Express/MongoDB.",
         stack: ["React Native", "Expo", "Express", "MongoDB"],
         status: "featured",
         hasCaseStudy: true,
@@ -150,7 +150,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Chef Claude",
         description:
-          "Génération de recettes grâce à l'IA.",
+          "Générateur de recettes par IA réalisé pour travailler l'intégration d'API et le state React.",
         stack: ["React", "Claude AI"],
         status: "learning",
         hasCaseStudy: false,
@@ -161,7 +161,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Assembly: End Game",
         description:
-          "Jeu inspiré du pendu pour travailler la logique React.",
+          "Jeu inspiré du pendu réalisé pour approfondir la logique et la gestion du state avec React.",
         stack: ["React"],
         status: "learning",
         hasCaseStudy: false,
@@ -172,7 +172,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Tenzies",
         description:
-          "Jeu de dés pour approfondir la gestion du state React.",
+          "Jeu de dés interactif pour travailler le state et la logique des composants React.",
         stack: ["React"],
         status: "learning",
         hasCaseStudy: false,
@@ -183,7 +183,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Todo AI",
         description:
-          "Application de gestion de tâches assistée par IA.",
+          "Projet mobile de gestion de tâches explorant React Native et des fonctionnalités assistées par IA.",
         stack: ["React Native", "Expo"],
         status: "learning",
         hasCaseStudy: false,
@@ -194,7 +194,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Quizzical",
         description:
-          "Application de quiz développée avec Next.js.",
+          "Application de quiz en Next.js et TypeScript pour approfondir la logique applicative.",
         stack: ["Next.js", "TypeScript"],
         status: "learning",
         hasCaseStudy: false,
@@ -205,7 +205,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "AI News Aggregator",
         description:
-          "Agrégateur de news enrichi par IA en cours de développement.",
+          "Plateforme d'agrégation de contenus d'actualité enrichie par IA, actuellement en développement.",
         stack: ["React Native", "TypeScript", "Express", "MongoDB"],
         status: "coming-soon",
         hasCaseStudy: false,
@@ -216,11 +216,10 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Portfolio personnel",
         description:
-          "Un portfolio bilingue en Next.js conçu comme une plateforme évolutive pour présenter projets, parcours et profil hybride business-tech.",
+          "Portfolio bilingue en Next.js conçu comme une plateforme évolutive reliant mon expérience business, digitale et technique.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
         hasCaseStudy: false,
-
       },
     ],
   },

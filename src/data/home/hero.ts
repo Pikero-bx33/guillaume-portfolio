@@ -15,7 +15,7 @@ export const heroContent: Record<Locale, HeroContent> = {
     eyebrow: "Business minded. Tech empowered.",
     title: "Business meets code.",
     description:
-      "I help businesses grow by connecting strategy, digital commerce and technology to build impactful solutions.",
+      "I bridge business, e-commerce and web development to turn commercial challenges into practical digital solutions.",
     primaryCta: "Discover my work",
     secondaryCta: "About me",
     cvLabel: "Download CV",
@@ -26,7 +26,7 @@ export const heroContent: Record<Locale, HeroContent> = {
     eyebrow: "Culture business. Esprit tech.",
     title: "Quand le business rencontre le code.",
     description:
-      "J'aide les entreprises à connecter stratégie, commerce digital et technologie pour construire des solutions à impact.",
+      "Je combine expérience business, e-commerce et développement web pour transformer des enjeux commerciaux en solutions digitales concrètes.",
     primaryCta: "Découvrir mes projets",
     secondaryCta: "À propos",
     cvLabel: "Télécharger mon CV",

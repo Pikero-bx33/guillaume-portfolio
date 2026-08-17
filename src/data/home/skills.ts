@@ -6,17 +6,29 @@ export const skillsContent: Record<Locale, SkillsContent> = {
     eyebrow: "Skills",
     title: "Business meets technology.",
     description:
-      "A hybrid profile combining marketplace expertise, business development and hands-on web development skills.",
+      "A hybrid profile combining business development, digital marketing, e-commerce and hands-on web development skills.",
     groups: [
       {
-        title: "Business",
+        title: "Business & E-commerce",
         skills: [
           "Business Development",
           "Marketplaces",
-          "E-commerce",
-          "Digital Marketing",
           "Seller Acquisition",
+          "B2B Sales",
           "MEDDIC / Discovery",
+          "Account Development",
+        ],
+      },
+      {
+        title: "Digital Marketing",
+        skills: [
+          "Campaign Planning & Performance",
+          "Email Marketing",
+          "Audience Segmentation",
+          "Landing Pages",
+          "Customer Acquisition",
+          "Trade-marketing",
+          "SEO",
         ],
       },
       {
@@ -33,24 +45,37 @@ export const skillsContent: Record<Locale, SkillsContent> = {
         ],
       },
     ],
-    closing: "The value comes from connecting both worlds.",
+    closing:
+      "The value comes from connecting business, digital marketing and technology.",
   },
 
   fr: {
     eyebrow: "Compétences",
     title: "Quand le business rencontre la tech.",
     description:
-      "Un profil hybride combinant expertise marketplace, business development et compétences concrètes en développement web.",
+      "Un profil hybride combinant business development, marketing digital, e-commerce et compétences concrètes en développement web.",
     groups: [
       {
-        title: "Business",
+        title: "Business & E-commerce",
         skills: [
           "Business Development",
           "Marketplaces",
-          "E-commerce",
-          "Marketing digital",
           "Acquisition vendeurs",
+          "Vente B2B",
           "MEDDIC / Discovery",
+          "Développement clients",
+        ],
+      },
+      {
+        title: "Marketing Digital",
+        skills: [
+          "Pilotage de campagnes",
+          "Email Marketing",
+          "Segmentation",
+          "Landing Pages",
+          "Acquisition",
+          "Trade-marketing",
+          "SEO",
         ],
       },
       {
@@ -67,6 +92,7 @@ export const skillsContent: Record<Locale, SkillsContent> = {
         ],
       },
     ],
-    closing: "La valeur vient de la connexion entre ces deux univers.",
+    closing:
+      "La valeur vient de la connexion entre business, marketing digital et technologie.",
   },
 };

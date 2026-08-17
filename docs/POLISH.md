@@ -45,3 +45,4 @@
 - [ ] Add "Learn more / En savoir plus" links to Career items
 - [ ] Create dynamic `/[lang]/experience/[slug]` pages
 - [ ] Add role details, missions, responsibilities and key achievements
+- [ ] Update CV v2 FR/EN

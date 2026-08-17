@@ -1,6 +1,6 @@
 import type { ContactContent } from "@/types/contact";
-
 import ContactLinks from "./ContactLinks";
+
 
 type ContactProps = {
   content: ContactContent;

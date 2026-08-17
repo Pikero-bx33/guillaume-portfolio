@@ -1,10 +1,9 @@
 import { notFound } from "next/navigation";
-
 import type { Metadata } from "next";
 
 import { projects } from "@/data/projects";
-
 import { projectUi } from "@/data/projects/ui";
+
 import type { Locale } from "@/types/locale";
 
 import ProjectHero from "@/components/project/ProjectHero";
@@ -30,9 +29,10 @@ type ProjectPageProps = {
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { lang, slug } = await params;
 
-  const project = projects[slug];
+  const locale = lang as Locale;
+  const project = projects[slug]?.[locale];
 
   if (!project) {
     return {
@@ -52,11 +52,11 @@ export default async function ProjectPage({
   const { lang, slug } = await params;
 
   const locale = lang as Locale;
+
   const labels = projectUi[locale];
+  const project = projects[slug]?.[locale];
 
-  const project = projects[slug];
-
-  if (!project) {
+  if (!project || !labels) {
     notFound();
   }
 

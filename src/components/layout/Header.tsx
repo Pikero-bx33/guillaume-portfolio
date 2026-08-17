@@ -19,7 +19,7 @@ export default function Header({
   const alternateLocale = locale === "en" ? "fr" : "en";
 
   return (
-    <header className="w-full border-b border-sand/60 bg-surface">
+    <header className="sticky top-0 z-50 w-full border-b border-sand/60 bg-surface/90 backdrop-blur">
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link

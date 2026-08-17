@@ -4,33 +4,33 @@ import type { AboutContent } from "@/types/about";
 export const aboutContent: Record<Locale, AboutContent> = {
   en: {
     eyebrow: "About me",
-    title: "Business first.\nTech next.",
+    title: "Business roots. Digital mindset. Tech skills.",
     highlights: [
       { label: "Experience", value: "15+ years" },
-      { label: "Focus", value: "Marketplaces" },
-      { label: "Development", value: "Full-Stack JS" },
-      { label: "Mindset", value: "Business × Tech" },
+      { label: "Business", value: "Sales & Marketplaces" },
+      { label: "Digital", value: "Marketing & E-commerce" },
+      { label: "Tech", value: "Full-Stack JS" },
     ],
     paragraphs: [
-      "My career has been built around digital commerce, marketplaces and business development.",
-      "Working closely with product and engineering teams over the years made me increasingly curious about how digital products are designed and built.",
-      "That curiosity led me to complete a full-stack JavaScript program, allowing me to combine business expertise with hands-on technical skills.",
+      "My career has grown across sales, digital marketing, e-commerce and marketplaces, giving me a broad understanding of how businesses acquire customers, sell online and grow.",
+      "Along the way, I worked on email marketing, audience segmentation, landing pages, acquisition campaigns, SEO and SEA, before moving deeper into marketplace business development.",
+      "Working closely with product and engineering teams made me increasingly curious about the technology behind digital products. That curiosity eventually led me to train in full-stack JavaScript development, adding hands-on technical skills to my business and digital marketing experience.",
     ],
   },
 
   fr: {
     eyebrow: "À propos",
-    title: "D'abord le business. Puis la tech.",
+    title: "Culture business. Marketing digital. Compétences tech.",
     highlights: [
       { label: "Expérience", value: "15+ ans" },
-      { label: "Expertise", value: "Marketplaces" },
-      { label: "Développement", value: "Full-Stack JS" },
-      { label: "Approche", value: "Business × Tech" },
+      { label: "Business", value: "Sales & Marketplaces" },
+      { label: "Digital", value: "Marketing & E-commerce" },
+      { label: "Tech", value: "Full-Stack JS" },
     ],
     paragraphs: [
-      "Depuis plus de quinze ans, j'évolue dans l'univers du commerce digital, des marketplaces et du business development.",
-      "En collaborant avec des équipes produit et techniques, j'ai progressivement eu envie de mieux comprendre comment les produits digitaux sont conçus et développés.",
-      "Cette curiosité m'a conduit à suivre une formation Full-Stack JavaScript afin de compléter mon expertise métier par des compétences techniques concrètes.",
+      "Mon parcours s'est construit entre commerce, marketing digital, e-commerce et marketplaces, avec une vision assez large des leviers permettant d'acquérir des clients, vendre en ligne et développer une activité.",
+      "J'ai notamment travaillé sur des campagnes emailing, la segmentation d'audiences, des landing pages, l'acquisition, le SEO et le SEA, avant de poursuivre mon parcours dans le business development marketplace.",
+      "En travaillant au contact d'équipes produit et techniques, j'ai progressivement voulu comprendre ce qui se passait aussi sous le capot. Cette curiosité m'a conduit vers une formation Full-Stack JavaScript, ajoutant des compétences techniques concrètes à mon expérience business et marketing digital.",
     ],
   },
 };

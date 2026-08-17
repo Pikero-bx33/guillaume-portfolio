@@ -4,70 +4,70 @@ import type { CareerContent } from "@/types/experience";
 export const experienceContent: Record<Locale, CareerContent> = {
   en: {
     eyebrow: "Career Journey",
-    title: "From business to tech.",
+    title: "Business. Digital. Tech.",
     experiences: [
       {
-        year: "2008",
-        company: "Cdiscount",
-        role: "Sales & Marketing",
+        year: "2010",
+        company: "Cdiscount Pro",
+        role: "B2B Sales & Digital Marketing",
         description:
-          "Developed marketplace and e-commerce expertise.",
+          "Built strong experience across B2B sales, e-commerce and digital marketing.",
       },
       {
         year: "2023",
         company: "Octopia",
-        role: "Business Development",
+        role: "Business Development — Dropshipping",
         description:
-          "Helped merchants scale through marketplace solutions.",
+          "Developed merchant acquisition across France and Europe for Octopia's dropshipping solution.",
       },
       {
         year: "2025",
         company: "Temu",
         role: "Senior Business Development",
         description:
-          "Developed local seller partnerships.",
+          "Recruited and developed local sellers for the French marketplace.",
       },
       {
         year: "2026",
         company: "La Capsule",
         role: "Full-Stack JavaScript",
         description:
-          "Completed an intensive MERN training program.",
+          "Added hands-on web development skills through an intensive MERN program.",
       },
     ],
   },
 
   fr: {
     eyebrow: "Parcours",
-    title: "Du business à la tech.",
+    title: "Business. Digital. Tech.",
     experiences: [
       {
-        year: "2008",
-        company: "Cdiscount",
-        role: "Sales & Marketing",
+        year: "2010",
+        company: "Cdiscount Pro",
+        role: "B2B Sales & Marketing Digital",
         description:
-          "Développement de mon expertise e-commerce et marketplace.",
+          "Développement d'une solide expérience en vente B2B, e-commerce et marketing digital.",
       },
       {
         year: "2023",
         company: "Octopia",
-        role: "Business Development",
+        role: "Business Development — Dropshipping",
         description:
-          "Accompagnement des marchands sur les solutions marketplace.",
+          "Développement de l'acquisition marchands en France et en Europe pour la solution dropshipping d'Octopia.",
       },
       {
         year: "2025",
         company: "Temu",
         role: "Senior Business Development",
         description:
-          "Développement des vendeurs locaux.",
+          "Recrutement et développement de vendeurs locaux pour la marketplace française.",
       },
       {
         year: "2026",
         company: "La Capsule",
         role: "Full-Stack JavaScript",
         description:
-          "Formation intensive au développement MERN.",
+          "Acquisition de compétences concrètes en développement web à travers une formation intensive MERN.",
       },
     ],
   },

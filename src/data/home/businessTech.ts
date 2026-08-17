@@ -4,9 +4,9 @@ import type { BusinessTechContent } from "@/types/businessTech";
 export const businessTechContent: Record<Locale, BusinessTechContent> = {
   en: {
     eyebrow: "Business × Tech",
-    title: "Connecting needs, products and technology.",
+    title: "Connecting business needs and technology.",
     description:
-      "My strength is understanding business challenges and translating them into clear product and technical conversations.",
+      "My experience across business, digital marketing and e-commerce helps me understand commercial challenges and turn them into clear product and technical conversations.",
     steps: [
       {
         title: "Understand",
@@ -16,21 +16,21 @@ export const businessTechContent: Record<Locale, BusinessTechContent> = {
       {
         title: "Translate",
         description:
-          "Turn business expectations into clear product requirements.",
+          "Turn business needs into clear product and technical requirements.",
       },
       {
         title: "Build",
         description:
-          "Understand the technical constraints and contribute to practical solutions.",
+          "Use my technical understanding to contribute to practical and realistic solutions.",
       },
     ],
   },
 
   fr: {
     eyebrow: "Business × Tech",
-    title: "Connecter les besoins, le produit et la technologie.",
+    title: "Connecter les besoins business et la technologie.",
     description:
-      "Ma force est de comprendre les enjeux business et de les traduire en échanges clairs avec les équipes produit et techniques.",
+      "Mon expérience en business, marketing digital et e-commerce me permet de comprendre les enjeux commerciaux et de les traduire en échanges clairs avec les équipes produit et techniques.",
     steps: [
       {
         title: "Comprendre",
@@ -40,12 +40,12 @@ export const businessTechContent: Record<Locale, BusinessTechContent> = {
       {
         title: "Traduire",
         description:
-          "Transformer les attentes métier en besoins produit clairs.",
+          "Transformer les besoins métier en attentes produit et techniques claires.",
       },
       {
         title: "Construire",
         description:
-          "Comprendre les contraintes techniques et contribuer à des solutions concrètes.",
+          "M'appuyer sur ma compréhension technique pour contribuer à des solutions concrètes et réalistes.",
       },
     ],
   },
