@@ -623,3 +623,386 @@ This makes adding future bilingual case studies possible without changing the dy
 - Update FR/EN CVs to align with the new portfolio positioning.
 - Add custom domain.
 - Add traffic analytics only once the portfolio content and features are stable.
+
+## Sprint 12 — Detailed Career Experience Pages
+
+### Objective
+
+Extend the portfolio with detailed bilingual career pages while keeping the Home career timeline concise.
+
+The objective was to provide recruiters with more context about each professional experience without overloading the main portfolio page.
+
+---
+
+### Completed
+
+#### Career Experience Architecture
+
+- Added a new reusable `ExperienceDetails` data structure
+- Added dynamic career route:
+  - `/[lang]/experience/[slug]`
+- Added centralized experience registry
+- Added bilingual FR / EN content
+- Added shared UI labels for career pages
+- Reused the same data-driven architecture philosophy as the Project Case Studies
+
+Career pages created for:
+
+- Cdiscount Pro
+- Octopia
+- Temu
+- La Capsule
+
+---
+
+### New Experience Components
+
+Created reusable components for detailed career pages:
+
+- `ExperienceHero`
+- `ExperienceOverview`
+- `ExperienceCareerPath`
+- `ExperienceResponsibilities`
+- `ExperienceAchievements`
+- `ExperienceSkills`
+- `ExperienceLessons`
+- `ExperienceActions`
+
+This keeps the page structure generic while allowing each experience to have different content.
+
+---
+
+### Cdiscount Pro
+
+Created a detailed career page covering the evolution of my roles within Cdiscount's B2B division from 2010 to 2022.
+
+Career progression documented:
+
+- Commercial Online
+- Business Developer Export
+- Business Developer Incentive
+- Business Developer Grands Comptes
+- Chef d'activité commerciale & Marketing Digital B2B
+
+The page highlights:
+
+- B2B sales
+- E-commerce
+- Business development
+- Customer acquisition
+- Key account management
+- Export
+- Incentive
+- Digital marketing
+- Email marketing
+- Commercial & marketing campaign management
+- Trade marketing
+- Landing pages
+- SEO collaboration
+- Revenue and margin management
+
+Particular attention was given to making the Digital Marketing dimension more visible in the portfolio.
+
+---
+
+### Octopia
+
+Created a dedicated page for the Octopia experience focused specifically on the development of the Dropshipping solution.
+
+Highlighted responsibilities include:
+
+- B2B seller acquisition
+- Outbound prospecting
+- Prospect identification and targeting
+- Discovery and qualification meetings
+- Pipeline management
+- Prospecting campaign analysis
+- Sales messaging optimisation
+- French and European market development
+- European e-commerce market analysis
+
+The page also highlights the importance of structured qualification and understanding seller potential, expectations and constraints.
+
+---
+
+### Temu
+
+Created a dedicated page for the Temu marketplace experience.
+
+The content is structured around three main areas:
+
+- Seller acquisition
+- Negotiation & partnerships
+- Seller support & performance
+
+Highlighted responsibilities include:
+
+- Identification and sourcing of French and European sellers
+- Seller recruitment
+- Seller onboarding
+- Partnerships with resellers, brands and distributors
+- Commercial negotiation
+- Account management
+- Seller performance support
+- Pricing
+- Logistics
+- Marketplace marketing
+
+The page presents the full seller journey from acquisition to marketplace performance.
+
+---
+
+### La Capsule
+
+Created a dedicated page for the Full-Stack JavaScript training.
+
+Unlike the other Career pages, La Capsule is identified as:
+
+- `Training / Formation`
+
+rather than:
+
+- `Career Experience / Expérience professionnelle`
+
+Added a dedicated experience category:
+
+- `career`
+- `training`
+
+The page highlights the technical skills acquired during the six-month program:
+
+- JavaScript
+- TypeScript
+- React
+- Next.js
+- React Native
+- Expo
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Zod
+- REST APIs
+- Redux Toolkit
+- Git
+- Responsive Design
+- Mobile Development
+
+The training is positioned as an additional technical layer complementing the existing Business, E-commerce and Digital Marketing background rather than replacing it.
+
+EcoProfs is also presented as the final team-based MVP project.
+
+---
+
+### Home Career Timeline
+
+Updated the Career Journey section on the Home page.
+
+Added a `slug` to each career experience.
+
+Added:
+
+- `Learn more →`
+- `En savoir plus →`
+
+Each Career item now links to its corresponding detailed page:
+
+- `/[lang]/experience/cdiscount-pro`
+- `/[lang]/experience/octopia`
+- `/[lang]/experience/temu`
+- `/[lang]/experience/la-capsule`
+
+The locale is preserved during navigation.
+
+---
+
+### Company & Training Logos
+
+Added visual branding to the Career Experience Hero.
+
+Logos integrated for:
+
+- Cdiscount Pro
+- Octopia
+- Temu
+- La Capsule
+
+Added to the Experience data model:
+
+- `logo`
+- `logoAlt`
+
+Logos are stored in the public assets and rendered through `next/image`.
+
+---
+
+### Career Page Navigation
+
+Integrated the existing portfolio Header and Footer into Career Experience pages.
+
+The Header supports:
+
+- Main portfolio navigation
+- Sticky positioning
+- Mobile navigation
+- FR / EN switching
+
+Language switching preserves the current Career Experience.
+
+Example:
+
+`/fr/experience/octopia`
+
+switches to:
+
+`/en/experience/octopia`
+
+instead of returning to the Home page.
+
+---
+
+### Scroll Behaviour
+
+Improved navigation behaviour across the portfolio.
+
+#### Career pages
+
+Created a reusable client component:
+
+- `ScrollToTop`
+
+It forces navigation to a new Career Experience page to start at the top of the page.
+
+The experience `slug` is used as a trigger so the scroll behaviour also works when navigating between dynamic routes.
+
+Smooth scrolling is used for a more natural transition.
+
+#### Home anchors
+
+The sticky Header was hiding the beginning of sections when navigating through anchors such as:
+
+- About
+- Experience
+- Skills
+- Projects
+- Contact
+
+Added:
+
+`scroll-mt-24`
+
+to the relevant Home sections.
+
+This creates enough scroll offset for the section eyebrow and title to remain visible below the sticky Header.
+
+The same behaviour also fixes:
+
+`Career Experience → Back to Career`
+
+when returning to:
+
+`/[lang]#experience`
+
+No additional JavaScript was required for Home anchor navigation.
+
+#### Project Case Studies
+
+Adjusted the top spacing of Project Case Study pages so the sticky Header no longer hides:
+
+- `Case Study`
+- `Étude de cas`
+
+Project page layout now uses additional top padding rather than anchor-specific scroll behaviour.
+
+---
+
+### UX / Design Improvements
+
+- Career pages share a consistent visual language with Project Case Studies
+- Company logos provide faster visual identification
+- Career progression is displayed as a dedicated timeline when relevant
+- Responsibilities use structured cards
+- Achievements are visually separated
+- Skills are displayed as badges
+- Long-form Career content is separated from the concise Home timeline
+- Professional Experience and Training are clearly differentiated
+- Sticky Header behaviour is now consistent across Home, Career and Project pages
+
+---
+
+### Architecture Decisions
+
+- Career content remains fully data-driven
+- FR and EN versions are stored together for each experience
+- One generic dynamic route handles every Career page
+- Shared components prevent UI duplication
+- Optional fields allow experiences to have different levels of detail
+- `careerSteps` is used only when an internal career progression needs to be represented
+- `category` allows professional experience and training to share the same architecture without misleading labels
+- Career pages follow the same architectural principles as Project Case Studies
+
+---
+
+### Key Learnings
+
+- Dynamic content structures can support different types of professional experiences without duplicating page logic
+- Optional TypeScript properties make reusable page architectures more flexible
+- Long-form career information is better separated from the main portfolio Home
+- A sticky Header needs to be considered when implementing anchor navigation
+- `scroll-margin` provides a clean CSS solution for anchor positioning without unnecessary JavaScript
+- Navigation between dynamic Next.js routes can require explicit scroll management
+- Content architecture and UI architecture can evolve independently when data is properly separated from presentation
+
+---
+
+### Validation
+
+- Tested all Career Experience routes
+- Tested FR versions
+- Tested EN versions
+- Verified Career → Home navigation
+- Verified Home → Career navigation
+- Verified FR / EN switching
+- Verified company / training logos
+- Verified La Capsule `Training / Formation` label
+- Verified sticky Header behaviour
+- Verified Home anchor navigation
+- Verified Career ScrollToTop behaviour
+- Verified Project Case Study top spacing
+- Verified responsive behaviour across main breakpoints
+- Header and Footer navigation verified
+
+Production build completed successfully:
+
+`npm run build`
+
+Results:
+
+- Next.js compilation successful
+- TypeScript validation successful
+- Static page generation successful
+- No build errors
+
+New dynamic route confirmed:
+
+`/[lang]/experience/[slug]`
+
+Existing routes remain operational:
+
+- `/[lang]`
+- `/[lang]/projects/[slug]`
+
+---
+
+### Next
+
+Sprint 13:
+
+- Redesign and update CV FR / EN
+- Align CV positioning with the portfolio
+- Strengthen Digital Marketing visibility
+- Integrate La Capsule Full-Stack JavaScript training
+- Add updated technical skills
+- Select relevant technical projects
+- Add portfolio URL
+- Review overall Business × Digital × Tech positioning

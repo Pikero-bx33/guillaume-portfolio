@@ -3,6 +3,7 @@ export type Experience = {
   company: string;
   role: string;
   description: string;
+  slug: string;
 };
 
 export type CareerContent = {

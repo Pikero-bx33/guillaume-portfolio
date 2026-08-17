@@ -13,6 +13,7 @@ import Beyond from "@/components/sections/beyond/Beyond";
 import Contact from "@/components/sections/contact/Contact";
 import Footer from "@/components/layout/Footer";
 
+
 import { heroContent } from "@/data/home/hero";
 import { aboutContent } from "@/data/home/about";
 import { experienceContent } from "@/data/home/experience";
@@ -78,7 +79,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <main>
         <Hero content={heroContent[locale]} />
         <About content={aboutContent[locale]} />
-        <Career content={experienceContent[locale]} />
+        <Career content={experienceContent[locale]} locale={locale} />
         <Skills content={skillsContent[locale]} />
         <BusinessTech content={businessTechContent[locale]} />
         <Projects content={projectsContent[locale]} locale={locale} />

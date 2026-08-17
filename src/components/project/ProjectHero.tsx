@@ -10,7 +10,7 @@ export default function ProjectHero({
   subtitle,
 }: ProjectHeroProps) {
   return (
-    <section className="pb-12 pt-4">
+    <section className="scroll-mt-24 pb-12 pt-4">
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ocean">
         {label}
       </p>

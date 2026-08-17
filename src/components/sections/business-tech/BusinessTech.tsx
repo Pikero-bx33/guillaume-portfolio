@@ -13,7 +13,7 @@ export default function BusinessTech({
   return (
     <section
       id="business-tech"
-      className="bg-[#eef8f8] px-6 py-16"
+      className="scroll-mt-18 bg-[#eef8f8] px-6 py-16"
     >
       <div className="mx-auto max-w-7xl">
         <BusinessTechHeader

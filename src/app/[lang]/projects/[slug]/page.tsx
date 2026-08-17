@@ -76,7 +76,7 @@ export default async function ProjectPage({
       />
       <main
         id="top"
-        className="mx-auto max-w-5xl px-6 py-12"
+        className="mx-auto max-w-5xl px-6 pb-12 pt-24"
       >
         <ProjectHero
           label={labels.caseStudy}
