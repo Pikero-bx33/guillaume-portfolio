@@ -531,3 +531,95 @@ This sprint moved the project from a local development application to a publicly
 URL:
 
 https://guillaume-legros.vercel.app
+
+## Sprint 11 — Portfolio Case Study & Project Navigation
+
+### Objective
+
+Extend the project case study system and improve navigation consistency across the portfolio.
+
+### Completed
+
+#### Personal Portfolio Case Study
+- Added a dedicated bilingual case study for the Personal Portfolio.
+- Added routes:
+  - `/fr/projects/portfolio`
+  - `/en/projects/portfolio`
+- Added the Portfolio to the central project registry.
+- Enabled `hasCaseStudy` for the Portfolio project cards.
+- Added detailed FR/EN content covering:
+  - Project context and objectives
+  - Tech stack
+  - Key features
+  - Architecture
+  - Technical and UX challenges
+  - Lessons learned
+  - Future improvements
+- Added GitHub and live production links.
+
+#### Portfolio Gallery
+- Added dedicated Portfolio screenshots:
+  - Desktop Hero
+  - Skills section
+  - Projects section
+  - Mobile responsive view
+- Added bilingual captions and alt texts.
+
+#### Case Study Navigation
+- Integrated the main Header into all project case studies.
+- Kept the Header sticky across project pages.
+- Adapted Home navigation anchors when accessed from a project page.
+- Navigation now correctly redirects from a case study to sections such as:
+  - About
+  - Career
+  - Skills
+  - Projects
+  - Contact
+- Updated the FR/EN language switch to preserve the current project:
+  - `/fr/projects/ecoprofs` → `/en/projects/ecoprofs`
+  - `/fr/projects/printforge` → `/en/projects/printforge`
+  - `/fr/projects/portfolio` → `/en/projects/portfolio`
+
+#### Footer
+- Integrated the existing Footer into all project case studies.
+- Added consistent "Back to top" navigation.
+
+#### Case Study Improvements
+- Updated the case study wording from:
+  - "If I were to rebuild this project..."
+  - "Si je devais reconstruire ce projet..."
+- To:
+  - "If I were to improve this project..."
+  - "Si je devais améliorer ce projet..."
+- Started cleaning future improvement lists to remove already completed items.
+
+#### Validation
+- Tested Portfolio case study in FR and EN.
+- Tested Header and Footer navigation on project pages.
+- Tested language switching between project case studies.
+- Reviewed responsive behaviour.
+- Production build validated successfully with Next.js 16.3.0.
+- TypeScript compilation completed without errors.
+- No build warnings.
+
+### Technical evolution
+
+The project case study architecture now supports multiple projects and locales through:
+
+`projects[slug][locale]`
+
+Current case studies:
+
+- PrintForge
+- EcoProfs
+- Personal Portfolio
+
+This makes adding future bilingual case studies possible without changing the dynamic routing architecture.
+
+### Backlog
+
+- Detailed Career Experience pages.
+- Continue accessibility improvements.
+- Update FR/EN CVs to align with the new portfolio positioning.
+- Add custom domain.
+- Add traffic analytics only once the portfolio content and features are stable.

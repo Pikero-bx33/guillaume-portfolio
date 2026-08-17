@@ -46,3 +46,12 @@
 - [ ] Create dynamic `/[lang]/experience/[slug]` pages
 - [ ] Add role details, missions, responsibilities and key achievements
 - [ ] Update CV v2 FR/EN
+
+## Analytics
+- [ ] Vercel Analytics ou Google Analytics 4.
+nombre de visiteurs,
+pages les plus vues,
+pays / device,
+clics sur CV / LinkedIn / GitHub / Contact,
+quelles Case Studies sont les plus consultées.
+

@@ -1,3 +1,9 @@
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+import { navigation } from "@/lib/navigation";
+import { footerContent } from "@/data/home/footer";
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -61,77 +67,92 @@ export default async function ProjectPage({
   }
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
-      <ProjectHero
-        label={labels.caseStudy}
-        title={project.title}
-        subtitle={project.subtitle}
+    <>
+      <Header
+        navigation={navigation[locale]}
+        locale={locale}
+        navigationBasePath={`/${locale}`}
+        alternateLocaleHref={`/${locale === "en" ? "fr" : "en"}/projects/${slug}`}
       />
-
-      <ProjectMeta
-        roleLabel={labels.role}
-        durationLabel={labels.duration}
-        statusLabel={labels.status}
-        role={project.role}
-        duration={project.duration}
-        status={project.status}
-      />
-
-      <ProjectOverview
-        title={labels.overview}
-        overview={project.overview}
-      />
-
-      <ProjectObjectives
-        title={labels.objectives}
-        objectives={project.objectives}
-      />
-
-      <ProjectTechStack
-        title={labels.techStack}
-        techStack={project.techStack}
-      />
-
-      <ProjectKeyFeatures
-        title={labels.keyFeatures}
-        features={project.keyFeatures}
-      />
-
-      <ProjectArchitecture
-        title={labels.architecture}
-        architecture={project.architecture}
-      />
-
-      <ProjectChallenges
-        title={labels.challenges}
-        challenges={project.challenges}
-      />
-
-      <ProjectLessons
-        title={labels.lessons}
-        lessons={project.lessons}
-      />
-
-      <ProjectNextSteps
-        title={labels.nextSteps}
-        nextSteps={project.nextSteps}
-      />
-
-      {project.gallery && (
-        <ProjectGallery
-          title={labels.gallery}
-          images={project.gallery}
+      <main
+        id="top"
+        className="mx-auto max-w-5xl px-6 py-12"
+      >
+        <ProjectHero
+          label={labels.caseStudy}
+          title={project.title}
+          subtitle={project.subtitle}
         />
-      )}
 
-      <ProjectActions
-        backLabel={labels.back}
-        githubLabel={labels.github}
-        demoLabel={labels.demo}
-        backHref={`/${locale}#projects`}
-        githubUrl={project.githubUrl}
-        liveUrl={project.liveUrl}
+        <ProjectMeta
+          roleLabel={labels.role}
+          durationLabel={labels.duration}
+          statusLabel={labels.status}
+          role={project.role}
+          duration={project.duration}
+          status={project.status}
+        />
+
+        <ProjectOverview
+          title={labels.overview}
+          overview={project.overview}
+        />
+
+        <ProjectObjectives
+          title={labels.objectives}
+          objectives={project.objectives}
+        />
+
+        <ProjectTechStack
+          title={labels.techStack}
+          techStack={project.techStack}
+        />
+
+        <ProjectKeyFeatures
+          title={labels.keyFeatures}
+          features={project.keyFeatures}
+        />
+
+        <ProjectArchitecture
+          title={labels.architecture}
+          architecture={project.architecture}
+        />
+
+        <ProjectChallenges
+          title={labels.challenges}
+          challenges={project.challenges}
+        />
+
+        <ProjectLessons
+          title={labels.lessons}
+          lessons={project.lessons}
+        />
+
+        <ProjectNextSteps
+          title={labels.nextSteps}
+          nextSteps={project.nextSteps}
+        />
+
+        {project.gallery && (
+          <ProjectGallery
+            title={labels.gallery}
+            images={project.gallery}
+          />
+        )}
+
+        <ProjectActions
+          backLabel={labels.back}
+          githubLabel={labels.github}
+          demoLabel={labels.demo}
+          backHref={`/${locale}#projects`}
+          githubUrl={project.githubUrl}
+          liveUrl={project.liveUrl}
+        />
+      </main>
+      <Footer
+        tagline={footerContent[locale].tagline}
+        backToTop={footerContent[locale].backToTop}
       />
-    </main>
+    </>
   );
 }

@@ -9,18 +9,31 @@ import type { NavItem } from "@/types/navigation";
 type HeaderProps = {
   navigation: NavItem[];
   locale: Locale;
+  navigationBasePath?: string;
+  alternateLocaleHref?: string;
 };
 
 export default function Header({
   navigation,
   locale,
+  navigationBasePath = "",
+  alternateLocaleHref,
 }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const alternateLocale = locale === "en" ? "fr" : "en";
+
+  const languageHref =
+    alternateLocaleHref ?? `/${alternateLocale}`;
+
+  function getNavigationHref(href: string) {
+    return navigationBasePath
+      ? `${navigationBasePath}${href}`
+      : href;
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-sand/60 bg-surface/90 backdrop-blur">
-
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
           href={`/${locale}`}
@@ -38,7 +51,7 @@ export default function Header({
         {/* Mobile */}
         <div className="flex items-center gap-3 md:hidden">
           <Link
-            href={`/${alternateLocale}`}
+            href={languageHref}
             className="rounded-full border border-ocean px-4 py-2 text-xs font-semibold uppercase text-deep-blue"
           >
             {alternateLocale}
@@ -47,7 +60,11 @@ export default function Header({
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              isMenuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-sand text-deep-blue"
@@ -65,7 +82,7 @@ export default function Header({
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    href={getNavigationHref(item.href)}
                     className="rounded-sm text-sm font-medium text-deep-blue transition-colors hover:text-ocean focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
                   >
                     {item.label}
@@ -76,13 +93,14 @@ export default function Header({
           </nav>
 
           <Link
-            href={`/${alternateLocale}`}
+            href={languageHref}
             className="rounded-full border border-ocean px-4 py-2 text-xs font-semibold uppercase text-deep-blue transition-all hover:bg-ocean hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-4"
           >
             {alternateLocale}
           </Link>
         </div>
       </div>
+
       {isMenuOpen && (
         <nav
           id="mobile-navigation"
@@ -93,7 +111,7 @@ export default function Header({
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={getNavigationHref(item.href)}
                   onClick={() => setIsMenuOpen(false)}
                   className="block font-medium text-deep-blue transition-colors hover:text-ocean"
                 >
