@@ -1353,3 +1353,287 @@ Main outcomes:
 - robots.txt validation
 - sitemap expansion
 - Production build validated
+
+## Sprint 15 — GitHub & README Documentation
+
+### Objective
+
+Improve the GitHub presentation of the portfolio so that the repository works as a technical complement to the live website and project case study.
+
+The goal was to move from the default development README to clear, professional project documentation.
+
+---
+
+### 1. README redesign
+
+Replaced the initial placeholder README with a complete project presentation.
+
+The README now introduces:
+
+- Guillaume Legros and the Business × Tech positioning
+- the purpose of the portfolio
+- the live production website
+- the main features
+- the technical stack
+- the project architecture
+- internationalization
+- SEO implementation
+- local installation
+- deployment
+- key learnings
+- author information
+
+The README is written in English to follow common GitHub and technical documentation standards.
+
+---
+
+### 2. Project Overview
+
+Added a dedicated Overview explaining that the portfolio is both:
+
+- a personal professional showcase;
+- a hands-on web development project.
+
+The introduction highlights the combination of:
+
+- Business Development
+- E-commerce
+- Digital Marketing
+- Web Development
+
+The portfolio is presented as a bilingual and evolving application rather than a simple static landing page.
+
+---
+
+### 3. Key Features documentation
+
+Documented the main portfolio features:
+
+- responsive mobile-first design
+- French / English localization
+- dynamic project pages
+- detailed professional experience pages
+- project galleries
+- GitHub and demo links
+- downloadable FR / EN resumes
+- sticky navigation
+- active-section highlighting / scroll spy
+- responsive mobile navigation
+- language switch
+- SEO metadata
+- canonical URLs
+- language alternates
+- Open Graph metadata
+- sitemap
+- robots configuration
+- Vercel deployment
+
+---
+
+### 4. Tech Stack documentation
+
+Documented the main technologies used by the project.
+
+Frontend:
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+
+Next.js features:
+
+- App Router
+- Dynamic Routes
+- Server Components
+- Client Components
+- Metadata API
+- next/image
+- next/font
+
+Development & Deployment:
+
+- Git
+- GitHub
+- npm
+- Vercel
+
+---
+
+### 5. Project Architecture
+
+Added a simplified project tree documenting the main architecture:
+
+src/
+├── app/
+│   ├── [lang]/
+│   │   ├── experience/[slug]/
+│   │   ├── projects/[slug]/
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/
+├── data/
+├── lib/
+└── types/
+
+Documented the main architecture principles:
+
+- separation between content and presentation
+- reusable components
+- dynamic routing
+- TypeScript data structures
+- locale-based content
+- shared component architecture between FR and EN
+
+---
+
+### 6. Internationalization documentation
+
+Documented the bilingual architecture.
+
+Main routes:
+
+/en
+/fr
+
+Dynamic routes follow the same locale structure:
+
+/en/projects/ecoprofs
+/fr/projects/ecoprofs
+
+/en/experience/temu
+/fr/experience/temu
+
+The README explains how localized data is separated from the UI components, avoiding duplicated page structures.
+
+---
+
+### 7. SEO documentation
+
+Added documentation about the SEO architecture implemented during Sprint 14.
+
+Covered:
+
+- Next.js Metadata API
+- localized titles and descriptions
+- dynamic project metadata
+- dynamic professional experience metadata
+- canonical URLs
+- FR / EN language alternates
+- Open Graph
+- Twitter / X metadata
+- robots.txt
+- XML sitemap
+
+This section explains how SEO follows the bilingual routing architecture.
+
+---
+
+### 8. Local Development documentation
+
+Added a complete Getting Started section.
+
+Documented:
+
+1. Repository cloning
+2. Dependency installation
+3. Environment configuration
+4. Development server startup
+5. English and French local routes
+
+Environment variable documented:
+
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+---
+
+### 9. Deployment documentation
+
+Documented the Vercel deployment workflow.
+
+Production website:
+
+https://guillaume-legros.vercel.app
+
+The README explains that production deployments are triggered from changes pushed to the main GitHub branch.
+
+---
+
+### 10. What I Learned
+
+Added a dedicated section describing the technical learning gained through the project.
+
+Main topics:
+
+- structuring a larger Next.js application
+- reusable component architecture
+- App Router
+- dynamic routes
+- TypeScript
+- bilingual content management
+- responsive design
+- navigation and scroll behavior
+- client-side interactions
+- SEO and metadata
+- maintainability
+- GitHub / Vercel production workflow
+
+The section also emphasizes understanding how the different layers of a web application work together rather than only implementing isolated features.
+
+---
+
+### 11. README visual preview
+
+Added a visual Preview section.
+
+Planned / added screenshots:
+
+- Portfolio Home — desktop
+- Projects section — desktop
+- Portfolio Home — mobile 375px
+
+Screenshot assets are stored in:
+
+public/readme/
+
+The mobile screenshot uses a constrained width in the README to preserve a realistic mobile presentation.
+
+The screenshots use the English version of the portfolio for consistency with the English README.
+
+---
+
+### 12. Repository cleanup preparation
+
+Reviewed the repository documentation and prepared final repository checks:
+
+- README cleanup
+- removal of development placeholders
+- verification of environment variables
+- verification that `.env.local` is not tracked
+- review of repository files
+- GitHub README rendering
+- validation of README links and screenshots
+
+---
+
+### Sprint 15 Status
+
+Completed / final GitHub rendering check pending.
+
+Main outcomes:
+
+- Professional English README
+- Clear project positioning
+- Live portfolio link
+- Features documentation
+- Tech stack documentation
+- Project architecture documentation
+- Internationalization documentation
+- SEO documentation
+- Local installation instructions
+- Vercel deployment documentation
+- Learning summary
+- Visual project previews
+- Repository cleanup preparation
