@@ -18,7 +18,10 @@ export default function Hero({ content }: HeroProps) {
   const isEnglishTitle = content.title === "Business meets code.";
 
   return (
-    <section className="overflow-hidden bg-background px-6 pb-12 pt-10 sm:pb-14 sm:pt-12 lg:pb-16 lg:pt-16">
+    <section
+      id="top"
+      className="scroll-mt-24 overflow-hidden bg-background px-6 pb-12 pt-10 sm:pb-14 sm:pt-12 lg:pb-16 lg:pt-16"
+    >
       <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1.3fr_0.7fr] md:gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
         {/* Content */}
         <div className="min-w-0 max-w-2xl">
@@ -28,8 +31,8 @@ export default function Hero({ content }: HeroProps) {
 
           <h1
             className={`mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-deep-blue sm:text-5xl lg:text-6xl xl:text-7xl ${isEnglishTitle
-                ? "md:whitespace-nowrap md:text-[3rem]"
-                : "md:text-[3rem]"
+              ? "md:whitespace-nowrap md:text-[3rem]"
+              : "md:text-[3rem]"
               }`}
           >
             {content.title}

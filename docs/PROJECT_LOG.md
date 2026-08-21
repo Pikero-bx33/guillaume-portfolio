@@ -1006,3 +1006,350 @@ Sprint 13:
 - Select relevant technical projects
 - Add portfolio URL
 - Review overall Business × Digital × Tech positioning
+
+## Sprint 14 — Final Polish, Navigation & SEO
+
+### Objective
+
+Finaliser l’expérience utilisateur du portfolio et renforcer sa préparation pour la production :
+responsive, navigation, liens projets, internationalisation et SEO technique.
+
+---
+
+### 1. Responsive & UI validation
+
+- Validation globale du responsive sur les principaux breakpoints :
+  - Mobile ~375px
+  - Tablet ~768px
+  - Laptop ~1024px
+  - Desktop ~1440px
+- Vérification de la Home, des Project pages et des Career Experience pages.
+- Ajustements finaux du Header et de la navigation mobile.
+
+---
+
+### 2. Header & Navigation improvements
+
+#### Scroll Spy
+
+Ajout d’un système de navigation active basé sur `IntersectionObserver`.
+
+Le Header indique maintenant automatiquement la section actuellement visible :
+
+- About
+- Career
+- Skills
+- Projects
+- Contact
+
+Desktop :
+- texte actif en `ocean`
+- underline actif
+
+Mobile :
+- état actif également matérialisé dans le menu burger
+
+#### Mobile navigation redesign
+
+Amélioration visuelle du menu burger :
+
+- navigation sous forme de blocs
+- meilleur spacing
+- états hover / active
+- flèches de navigation
+- meilleure hiérarchie visuelle
+
+#### Language switch redesign
+
+Remplacement de l’ancien bouton FR / EN par un véritable segmented toggle :
+
+`FR | EN`
+
+- les deux langues restent visibles
+- langue active avec fond `ocean`
+- comportement cohérent desktop / mobile
+- version compacte pour les petits écrans
+
+#### Scroll / sticky header fixes
+
+Correction des problèmes liés au Header sticky :
+
+- navigation vers les sections de la Home
+- retour depuis les Career pages
+- retour depuis les Project pages
+- changement de langue
+- Hero / eyebrow correctement visibles après navigation
+
+---
+
+### 3. Projects section improvements
+
+Modification du wording de la section Projects.
+
+FR :
+- `Projets principaux & projets d’apprentissage`
+- `Projets principaux`
+- `Projets d’apprentissage`
+
+EN :
+- `Main projects & learning projects`
+- `Main projects`
+- `Learning projects`
+
+Ajout du titre `Projets principaux / Main projects` au-dessus des principales Project Cards.
+
+Les principaux projets sont désormais :
+
+- EcoProfs
+- PrintForge
+- Personal Portfolio
+
+---
+
+### 4. Project actions & external links
+
+Amélioration de `ProjectActions`.
+
+Support désormais de :
+
+- `githubUrl` pour un repository unique
+- `githubUrls` pour plusieurs repositories
+- `liveUrl` pour une démo
+
+#### PrintForge
+
+- repository GitHub correctement relié
+- pas de Demo publique actuellement
+
+#### EcoProfs
+
+EcoProfs utilisant deux repositories séparés :
+
+- GitHub Frontend
+- GitHub Backend
+
+`ProjectActions` a été adapté pour supporter plusieurs liens GitHub.
+
+Ajout également d’une vidéo de démonstration EcoProfs hébergée sur YouTube en mode non répertorié.
+
+EcoProfs dispose maintenant de :
+
+- GitHub Frontend
+- GitHub Backend
+- Demo vidéo
+
+#### Personal Portfolio
+
+- GitHub repository actif
+- Demo redirige vers le portfolio live
+
+---
+
+### 5. SEO — Global Metadata
+
+Amélioration de `app/layout.tsx`.
+
+Ajout / amélioration de :
+
+- `metadataBase`
+- global title
+- title template
+- global description
+- keywords
+- authors
+- creator
+- Open Graph metadata
+- Twitter metadata
+
+Positionnement SEO harmonisé autour du profil hybride :
+
+Business Development + E-commerce + Digital Marketing + Web Development.
+
+---
+
+### 6. SEO — Home FR / EN
+
+Amélioration de `generateMetadata()` dans :
+
+`app/[lang]/page.tsx`
+
+Metadata spécifiques pour chaque langue :
+
+- title
+- description
+- canonical URL
+- language alternates
+- Open Graph title
+- Open Graph description
+- Open Graph locale
+
+FR et EN utilisent désormais un positionnement éditorial cohérent autour du concept de profil hybride.
+
+---
+
+### 7. SEO — Project pages
+
+Amélioration de `generateMetadata()` dans :
+
+`app/[lang]/projects/[slug]/page.tsx`
+
+Chaque projet dispose maintenant dynamiquement de :
+
+- title
+- description
+- canonical URL
+- FR alternate URL
+- EN alternate URL
+- Open Graph metadata
+- Twitter metadata
+
+Exemple :
+
+`/fr/projects/ecoprofs`
+
+Canonical :
+`/fr/projects/ecoprofs`
+
+Language alternate :
+`/en/projects/ecoprofs`
+
+---
+
+### 8. SEO — Career Experience pages
+
+Même architecture SEO appliquée à :
+
+`app/[lang]/experience/[slug]/page.tsx`
+
+Chaque expérience dispose maintenant de metadata dynamiques :
+
+- company + job title
+- description
+- canonical URL
+- FR / EN alternates
+- Open Graph
+- Twitter
+
+Applicable notamment à :
+
+- Cdiscount Pro
+- Octopia
+- Temu
+- La Capsule
+
+---
+
+### 9. Internationalisation & HTML language
+
+Identification d’un problème dans le Root Layout :
+
+`<html lang="en">`
+
+était également utilisé pour les pages françaises.
+
+Ajout d’un layout `[lang]` permettant de matérialiser la langue du contenu selon la route :
+
+- `/fr` → contenu FR
+- `/en` → contenu EN
+
+Amélioration de la cohérence entre :
+
+- URL
+- contenu
+- metadata
+- language alternates
+- langue déclarée dans la structure de page
+
+---
+
+### 10. robots.txt
+
+Validation de :
+
+`app/robots.ts`
+
+Configuration :
+
+- autorisation du crawl global
+- déclaration du sitemap
+
+Le site est accessible aux moteurs de recherche.
+
+---
+
+### 11. sitemap.xml
+
+Mise à jour de :
+
+`app/sitemap.ts`
+
+Le sitemap contient maintenant les principales routes FR et EN.
+
+Home :
+- `/fr`
+- `/en`
+
+Projects :
+- PrintForge FR / EN
+- EcoProfs FR / EN
+- Portfolio FR / EN
+
+Career Experience :
+- Cdiscount Pro FR / EN
+- Octopia FR / EN
+- Temu FR / EN
+- La Capsule FR / EN
+
+Priorités SEO différenciées entre Home, Projects et Career pages.
+
+---
+
+### 12. Production Build
+
+Validation finale :
+
+npm run build
+
+Result:
+
+- Compilation successful
+- TypeScript successful
+- Static page generation successful
+- No build errors
+
+Routes validated:
+
+/
+ /[lang]
+ /[lang]/experience/[slug]
+ /[lang]/projects/[slug]
+ /icon.png
+ /opengraph-image.png
+ /robots.txt
+ /sitemap.xml
+
+---
+
+### Sprint 14 Status
+
+Completed.
+
+Main outcomes:
+
+- Responsive validation
+- Improved mobile navigation
+- Active section navigation / Scroll Spy
+- Improved FR / EN toggle
+- Improved Projects hierarchy
+- GitHub / Demo actions cleaned up
+- EcoProfs video demo added
+- Global SEO metadata
+- Localized FR / EN metadata
+- Dynamic Project SEO
+- Dynamic Career SEO
+- Canonical URLs
+- Language alternates
+- Open Graph / Twitter metadata
+- robots.txt validation
+- sitemap expansion
+- Production build validated

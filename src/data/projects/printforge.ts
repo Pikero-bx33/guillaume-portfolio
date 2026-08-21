@@ -95,8 +95,8 @@ export const printForgeProject: Record<Locale, ProjectDetails> = {
       },
     ],
 
-    // Replace with the actual PrintForge repository URL
-    githubUrl: "",
+    githubUrl: "https://github.com/Pikero-bx33/printforge",
+    liveUrl: undefined,
   },
 
   fr: {
@@ -192,7 +192,7 @@ export const printForgeProject: Record<Locale, ProjectDetails> = {
       },
     ],
 
-    // Replace with the actual PrintForge repository URL
-    githubUrl: "",
+    githubUrl: "https://github.com/Pikero-bx33/printforge",
+    liveUrl: undefined,
   },
 };

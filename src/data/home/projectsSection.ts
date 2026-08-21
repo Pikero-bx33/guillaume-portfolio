@@ -4,9 +4,10 @@ import type { ProjectsSectionContent } from "@/types/project";
 export const projectsContent: Record<Locale, ProjectsSectionContent> = {
   en: {
     eyebrow: "Projects",
-    title: "Selected projects & learning builds.",
+    title: "Main projects & learning projects.",
     description:
       "From full applications to focused learning projects, each build is an opportunity to turn ideas into working products and strengthen my technical skills.",
+    mainTitle: "Main projects",
     learningTitle: "Learning Projects",
     comingSoonTitle: "Coming Soon",
     inProgressLabel: "In Progress",
@@ -115,9 +116,10 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
 
   fr: {
     eyebrow: "Projets",
-    title: "Projets sélectionnés & projets d'apprentissage.",
+    title: "Projets principaux & projets d’apprentissage.",
     description:
       "Des applications complètes aux projets plus ciblés, chaque réalisation me permet de transformer une idée en produit fonctionnel et de renforcer mes compétences techniques.",
+    mainTitle: "Projets principaux",
     learningTitle: "Projets d'apprentissage",
     comingSoonTitle: "À venir",
     inProgressLabel: "En cours",

@@ -121,7 +121,17 @@ export const ecoProfsProject: Record<Locale, ProjectDetails> = {
       },
     ],
 
-    githubUrl: "TON_URL_GITHUB_ECOPROFS",
+    githubUrls: [
+      {
+        label: "GitHub Frontend",
+        url: "https://github.com/alexandre-franc/ecoprofs-mobile-app",
+      },
+      {
+        label: "GitHub Backend",
+        url: "URL_DU_REPO_BACKEND",
+      },
+    ],
+    liveUrl: "https://youtu.be/UgtFIDcQnuU",
   },
 
   fr: {
@@ -243,6 +253,19 @@ export const ecoProfsProject: Record<Locale, ProjectDetails> = {
       },
     ],
 
-    githubUrl: "TON_URL_GITHUB_ECOPROFS",
+
+
+    githubUrls: [
+      {
+        label: "GitHub Frontend",
+        url: "https://github.com/alexandre-franc/ecoprofs-mobile-app",
+      },
+      {
+        label: "GitHub Backend",
+        url: "https://github.com/alexandre-franc/ecoprofs-backend",
+      },
+    ],
+
+    liveUrl: "https://youtu.be/UgtFIDcQnuU",
   },
 };

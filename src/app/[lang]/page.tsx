@@ -47,16 +47,52 @@ export async function generateMetadata({
 
   if (lang === "fr") {
     return {
-      title: "Portfolio",
+      title: "Business, E-commerce, Marketing Digital & Tech",
       description:
-        "Portfolio de Guillaume Legros — profil hybride business, e-commerce et développement web.",
+        "Portfolio de Guillaume Legros — profil hybride combinant business development, e-commerce, marketing digital et compétences en développement web.",
+
+      alternates: {
+        canonical: "/fr",
+        languages: {
+          "fr-FR": "/fr",
+          "en": "/en",
+        },
+      },
+
+      openGraph: {
+        title:
+          "Guillaume Legros | Business, E-commerce, Marketing Digital & Tech",
+        description:
+          "Profil hybride combinant business development, e-commerce, marketing digital et développement web.",
+        url: "/fr",
+        locale: "fr_FR",
+        type: "website",
+      },
     };
   }
 
   return {
-    title: "Portfolio",
+    title: "Business, E-commerce, Digital Marketing & Tech",
     description:
-      "Portfolio of Guillaume Legros — combining business, e-commerce and web development.",
+      "Portfolio of Guillaume Legros — a hybrid profile combining business development, e-commerce, digital marketing and hands-on web development skills.",
+
+    alternates: {
+      canonical: "/en",
+      languages: {
+        "fr-FR": "/fr",
+        "en": "/en",
+      },
+    },
+
+    openGraph: {
+      title:
+        "Guillaume Legros | Business, E-commerce, Digital Marketing & Tech",
+      description:
+        "A hybrid profile combining business development, e-commerce, digital marketing and web development.",
+      url: "/en",
+      locale: "en_US",
+      type: "website",
+    },
   };
 }
 

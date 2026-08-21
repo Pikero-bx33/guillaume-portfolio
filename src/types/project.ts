@@ -19,6 +19,7 @@ export type ProjectsSectionContent = {
   eyebrow: string;
   title: string;
   description: string;
+  mainTitle: string
   learningTitle: string;
   comingSoonTitle: string;
   inProgressLabel: string;

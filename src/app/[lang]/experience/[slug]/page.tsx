@@ -45,9 +45,38 @@ export async function generateMetadata({
     };
   }
 
+  const canonicalUrl = `/${locale}/experience/${slug}`;
+
+  const frUrl = `/fr/experience/${slug}`;
+  const enUrl = `/en/experience/${slug}`;
+
+  const isFrench = locale === "fr";
+
   return {
     title: `${experience.company} — ${experience.title}`,
     description: experience.subtitle,
+
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "fr-FR": frUrl,
+        en: enUrl,
+      },
+    },
+
+    openGraph: {
+      title: `${experience.company} — ${experience.title} | Guillaume Legros`,
+      description: experience.subtitle,
+      url: canonicalUrl,
+      type: "article",
+      locale: isFrench ? "fr_FR" : "en_US",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${experience.company} — ${experience.title} | Guillaume Legros`,
+      description: experience.subtitle,
+    },
   };
 }
 

@@ -26,5 +26,11 @@ export type ProjectDetails = {
   gallery?: ProjectImage[];
 
   githubUrl?: string;
+
+  githubUrls?: {
+    label: string;
+    url: string;
+  }[];
+
   liveUrl?: string;
 };

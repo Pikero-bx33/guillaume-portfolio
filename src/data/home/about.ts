@@ -9,7 +9,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       { label: "Experience", value: "15+ years" },
       { label: "Business", value: "Sales & Marketplaces" },
       { label: "Digital", value: "Marketing & E-commerce" },
-      { label: "Tech", value: "Full-Stack JS" },
+      { label: "Tech", value: "Full-Stack JS certified" },
     ],
     paragraphs: [
       "My career has grown across sales, digital marketing, e-commerce and marketplaces, giving me a broad understanding of how businesses acquire customers, sell online and grow.",
@@ -25,7 +25,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       { label: "Expérience", value: "15+ ans" },
       { label: "Business", value: "Sales & Marketplaces" },
       { label: "Digital", value: "Marketing & E-commerce" },
-      { label: "Tech", value: "Full-Stack JS" },
+      { label: "Tech", value: "Certifié Full-Stack JS" },
     ],
     paragraphs: [
       "Mon parcours s'est construit entre commerce, marketing digital, e-commerce et marketplaces, avec une vision assez large des leviers permettant d'acquérir des clients, vendre en ligne et développer une activité.",

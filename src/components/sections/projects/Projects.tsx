@@ -37,6 +37,7 @@ export default function Projects({ content, locale }: ProjectsProps) {
         />
 
         <FeaturedProjects
+          title={content.mainTitle}
           projects={featuredProjects}
           locale={locale}
         />

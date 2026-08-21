@@ -2,7 +2,7 @@ import type { Locale } from "@/types/locale";
 
 export const projectUi = {
   en: {
-    caseStudy: "Case Study",
+    caseStudy: "Project spotlight",
     overview: "Overview",
     objectives: "Objectives",
     techStack: "Tech Stack",
@@ -16,12 +16,12 @@ export const projectUi = {
     status: "Status",
     back: "Back to portfolio",
     github: "GitHub",
-    demo: "Live Demo",
+    demo: "Watch demo",
     gallery: "Project Gallery",
   },
 
   fr: {
-    caseStudy: "Étude de cas",
+    caseStudy: "Focus projet",
     overview: "Présentation",
     objectives: "Objectifs",
     techStack: "Stack technique",
@@ -35,7 +35,7 @@ export const projectUi = {
     status: "Statut",
     back: "Retour au portfolio",
     github: "GitHub",
-    demo: "Démo",
+    demo: "Voir la démo",
     gallery: "Galerie du projet",
   },
 } satisfies Record<Locale, Record<string, string>>;

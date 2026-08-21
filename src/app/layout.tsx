@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Portfolio of Guillaume Legros — combining e-commerce, business development and web development.",
+    "Portfolio of Guillaume Legros — a hybrid profile combining business development, e-commerce, digital marketing and web development.",
 
   keywords: [
     "Guillaume Legros",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Marketplace",
     "Business Development",
     "Web Developer",
-    "Digital marketing",
+    "Digital Marketing",
   ],
 
   authors: [
@@ -44,13 +44,32 @@ export const metadata: Metadata = {
   ],
 
   creator: "Guillaume Legros",
+
+  openGraph: {
+    siteName: "Guillaume Legros Portfolio",
+    type: "website",
+
+    images: [
+      {
+        url: "/opengraph-image.png", // ou url: "/icon.png" et suppr width et height
+        width: 1200,
+        height: 630,
+        alt: "Guillaume Legros — Business × Code",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       id="top"
-      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

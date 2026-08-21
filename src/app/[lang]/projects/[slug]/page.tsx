@@ -46,9 +46,47 @@ export async function generateMetadata({
     };
   }
 
+  const isFrench = locale === "fr";
+
+  const canonicalUrl = `/${locale}/projects/${slug}`;
+
+  const alternateLanguageUrl =
+    locale === "fr"
+      ? `/en/projects/${slug}`
+      : `/fr/projects/${slug}`;
+
   return {
     title: project.title,
     description: project.subtitle,
+
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "fr-FR":
+          locale === "fr"
+            ? canonicalUrl
+            : alternateLanguageUrl,
+
+        "en":
+          locale === "en"
+            ? canonicalUrl
+            : alternateLanguageUrl,
+      },
+    },
+
+    openGraph: {
+      title: `${project.title} | Guillaume Legros`,
+      description: project.subtitle,
+      url: canonicalUrl,
+      type: "article",
+      locale: isFrench ? "fr_FR" : "en_US",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Guillaume Legros`,
+      description: project.subtitle,
+    },
   };
 }
 
@@ -146,6 +184,7 @@ export default async function ProjectPage({
           demoLabel={labels.demo}
           backHref={`/${locale}#projects`}
           githubUrl={project.githubUrl}
+          githubUrls={project.githubUrls}
           liveUrl={project.liveUrl}
         />
       </main>
