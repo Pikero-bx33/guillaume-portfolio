@@ -1636,4 +1636,39 @@ Main outcomes:
 - Vercel deployment documentation
 - Learning summary
 - Visual project previews
-- Repository cleanup preparation
+- Repository cleanup and final GitHub rendering validation
+
+---
+
+## Sprint 16 — Production Quality Check
+
+### Objective
+
+Run a short final production audit focused on quality, accessibility, performance and error handling.
+
+### Completed
+
+- Lighthouse audit on production
+- Re-tested in Incognito mode to avoid browser extension interference
+- Final Lighthouse scores:
+  - Performance: 90
+  - Accessibility: 96
+  - Best Practices: 100
+  - SEO: 100
+- Confirmed deprecated API warning was caused by a browser extension, not the application
+- Verified valid and invalid routes
+- Verified dynamic Project and Career routes
+- Verified unsupported locale routes return 404
+- Added a custom 404 page matching the portfolio visual identity
+- Verified responsive behavior of the 404 page
+- Final production build completed successfully
+- No build errors
+
+### Backlog
+
+- Improve document language handling so `<html lang>` is fully dynamic for FR / EN
+- Continue accessibility improvements in a future technical polish sprint
+
+### Sprint 16 Status
+
+Completed.
