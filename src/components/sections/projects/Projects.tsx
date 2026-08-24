@@ -45,6 +45,7 @@ export default function Projects({ content, locale }: ProjectsProps) {
         <LearningProjects
           projects={learningProjects}
           title={content.learningTitle}
+          locale={locale}
         />
 
         <ComingSoonProjects

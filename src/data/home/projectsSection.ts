@@ -62,10 +62,10 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Tenzies",
         description:
-          "Interactive dice game focused on React state and component logic.",
-        stack: ["React"],
+          "A Next.js dice game featuring persistent records, game statistics and accessible interactions.",
+        stack: ["Next.js", "React", "TypeScript"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
@@ -174,10 +174,10 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         year: 2026,
         title: "Tenzies",
         description:
-          "Jeu de dés interactif pour travailler le state et la logique des composants React.",
-        stack: ["React"],
+          "Jeu de dés Next.js intégrant statistiques, records persistants et interactions accessibles.",
+        stack: ["Next.js", "React", "TypeScript"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {

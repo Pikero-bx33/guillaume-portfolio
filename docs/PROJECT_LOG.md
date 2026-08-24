@@ -1672,3 +1672,421 @@ Run a short final production audit focused on quality, accessibility, performanc
 ### Sprint 16 Status
 
 Completed.
+
+---
+
+## Sprint 17 — PrintForge Documentation & Production Deployment
+
+### Objective
+
+Finalize PrintForge as a portfolio-ready project by improving its GitHub documentation, adding visual previews, deploying the application to production and resolving its SQLite compatibility issues with Vercel.
+
+---
+
+### 1. README Redesign
+
+Replaced the default `create-next-app` README with complete project documentation.
+
+The new README includes:
+
+- project introduction and positioning;
+- project overview;
+- key features;
+- technical stack;
+- project architecture;
+- dynamic routing explanation;
+- data architecture;
+- local installation instructions;
+- key learnings;
+- future improvements;
+- portfolio case study link;
+- live production demo;
+- author information.
+
+PrintForge is presented as a completed learning project within its current scope, while keeping possible future improvements documented.
+
+---
+
+### 2. Visual Preview
+
+Added dedicated README screenshots stored in:
+
+public/readme/
+
+The preview includes:
+
+- PrintForge Home page;
+- 3D Model detail page.
+
+This provides a visual overview of the application directly from the GitHub repository.
+
+---
+
+### 3. GitHub Repository
+
+Finalized the PrintForge GitHub repository and pushed the updated documentation and project assets.
+
+Repository documentation now acts as a technical complement to the PrintForge case study available on the portfolio.
+
+---
+
+### 4. Initial Vercel Deployment
+
+Configured PrintForge for deployment on Vercel.
+
+The initial deployment failed during the Next.js production build on the dynamic route:
+
+/3d-models/[id]
+
+The underlying issue was identified as the native `sqlite3` Node.js module.
+
+The local SQLite implementation depended on:
+
+sqlite3
+→ native node_sqlite3 binary
+→ system GLIBC version
+
+The binary required a GLIBC version unavailable in the Vercel build environment.
+
+The application worked locally but could therefore not be reliably deployed using the existing SQLite driver.
+
+---
+
+### 5. SQLite → Turso / libSQL Migration
+
+Rather than removing the SQL architecture or replacing the database with static JSON data, the project was migrated from a local SQLite database to a remote Turso/libSQL database.
+
+Previous architecture:
+
+Next.js
+→ data functions
+→ sqlite / sqlite3
+→ local printforge.db
+
+New architecture:
+
+Next.js
+→ data functions
+→ @libsql/client
+→ Turso
+→ remote PrintForge database
+
+This preserves the SQL-based architecture while making the application compatible with a serverless production environment.
+
+---
+
+### 6. Database Migration
+
+Created a remote PrintForge database on Turso.
+
+Exported the existing local SQLite database and migrated:
+
+- `models`
+- `categories`
+
+including the existing project data.
+
+Validated the remote database by checking the tables and records through the Turso SQL shell.
+
+---
+
+### 7. Data Layer Refactoring
+
+Replaced the previous SQLite connection based on:
+
+getDBConnection()
+db.all()
+db.get()
+db.close()
+
+with the libSQL client:
+
+db.execute()
+
+Updated the main data functions including:
+
+- `getModels()`
+- `getModelCount()`
+- `getModelById()`
+- `getCategories()`
+- `getCategoryBySlug()`
+
+The existing SQL logic for:
+
+- search;
+- filtering;
+- sorting;
+- pagination;
+- category selection;
+- model lookup;
+
+was largely preserved.
+
+---
+
+### 8. Server / Client Serialization
+
+After the libSQL migration, Next.js reported warnings when database rows were passed from Server Components to Client Components.
+
+The returned libSQL rows were converted into plain JavaScript objects before being passed to Client Components.
+
+This removed the serialization warnings and provided explicit conversion of database values into the application's TypeScript models.
+
+---
+
+### 9. Seed Migration
+
+Updated the existing database seed utilities to use the new Turso/libSQL client instead of the previous `getDBConnection()` implementation.
+
+Removed remaining dependencies on the old local SQLite connection architecture.
+
+---
+
+### 10. Dependency Cleanup
+
+Removed obsolete SQLite dependencies after validating the migration:
+
+- `sqlite`
+- `sqlite3`
+- `@types/sqlite3`
+
+Verified that the application no longer imports or depends on the native SQLite driver.
+
+This also removed the native dependency responsible for the original Vercel deployment failure.
+
+---
+
+### 11. Environment Configuration
+
+Added Turso environment variables:
+
+TURSO_DATABASE_URL
+TURSO_AUTH_TOKEN
+
+Configured them locally through `.env.local` and added the corresponding production environment variables to Vercel.
+
+Sensitive credentials remain excluded from Git.
+
+---
+
+### 12. Production Validation
+
+Validated the application locally after migration:
+
+- models catalog;
+- model detail pages;
+- categories;
+- search;
+- filtering;
+- sorting;
+- pagination;
+- database access.
+
+Successfully completed the Next.js production build after the migration.
+
+The application was then successfully deployed to Vercel.
+
+Live application:
+
+https://printforge-phi.vercel.app
+
+---
+
+### 13. Portfolio Integration
+
+Added the PrintForge production URL to the project case study.
+
+The Portfolio Demo button now links directly to the deployed PrintForge application.
+
+The PrintForge README also links back to the detailed Portfolio case study.
+
+This creates navigation between:
+
+GitHub repository
+↔ Live application
+↔ Portfolio case study
+
+---
+
+### Future Improvements
+
+PrintForge remains open to future improvements, including:
+
+- richer model galleries;
+- favorites;
+- user accounts;
+- model uploads;
+- additional search/filtering capabilities;
+- accessibility improvements;
+- SEO improvements;
+- automated testing.
+
+These features are outside the current project scope.
+
+---
+
+### Sprint 17 Status
+
+Completed.
+
+Main outcomes:
+
+- Professional PrintForge README
+- README visual previews
+- GitHub repository finalized
+- Vercel deployment configured
+- Vercel SQLite compatibility issue diagnosed
+- Local SQLite migrated to Turso/libSQL
+- Existing SQL logic preserved
+- Data layer migrated to `@libsql/client`
+- Server/Client serialization warnings resolved
+- Database seeds migrated
+- Legacy SQLite dependencies removed
+- Production environment variables configured
+- Production build validated
+- PrintForge successfully deployed
+- Live Demo integrated into the Portfolio
+
+---
+
+## Sprint 18 — Tenzies Learning Project
+
+### Objective
+
+Revisit the original Scrimba Tenzies React project, refactor it as a standalone Next.js application and integrate it into the portfolio as a complete Learning Project.
+
+---
+
+### 1. React → Next.js Refactor
+
+Reworked the original Tenzies project initially developed during the Scrimba React course.
+
+The project was migrated and reorganized as a standalone Next.js application using:
+
+- Next.js
+- React
+- TypeScript
+
+The objective was not simply to reproduce the Scrimba exercise, but to turn it into a cleaner and more complete personal learning project.
+
+---
+
+### 2. Game Improvements
+
+Expanded the original Tenzies game with additional functionality and UX improvements.
+
+The application now includes:
+
+- complete Tenzies game logic;
+- dice selection and hold interactions;
+- roll tracking;
+- game statistics;
+- persistent records;
+- improved game feedback;
+- accessible interactions;
+- responsive interface.
+
+---
+
+### 3. GitHub Repository
+
+Created a dedicated GitHub repository for the refactored application.
+
+Repository:
+
+https://github.com/Pikero-bx33/tenzies-next
+
+The project now exists independently from the original Scrimba environment and can continue evolving as a standalone application.
+
+---
+
+### 4. Production Deployment
+
+Deployed the application to Vercel.
+
+Live application:
+
+https://tenzies-next.vercel.app/
+
+The project is now accessible as a standalone production demo.
+
+---
+
+### 5. Portfolio Case Study
+
+Created dedicated bilingual project data for Tenzies:
+
+data/projects/tenzies.ts
+
+Added Tenzies to the central project registry:
+
+data/projects/index.ts
+
+The project can now use the existing dynamic project architecture:
+
+/en/projects/tenzies
+/fr/projects/tenzies
+
+The case study includes links to:
+
+- GitHub repository;
+- live Vercel demo.
+
+---
+
+### 6. Learning Projects Navigation
+
+Updated the Learning Projects architecture so that learning project cards can optionally link to a case study.
+
+Tenzies now uses:
+
+hasCaseStudy: true
+
+The Learning Projects components were updated to support locale-aware navigation to:
+
+/[locale]/projects/[slug]
+
+This prepares the architecture for other Learning Projects such as Chef Claude or Assembly End Game to become clickable when they are revisited and documented.
+
+Existing Learning Projects without a case study remain non-clickable.
+
+---
+
+### 7. Portfolio Integration
+
+Tenzies is now displayed in the Learning Projects section with:
+
+- project description;
+- technical stack;
+- clickable project card;
+- bilingual case study;
+- GitHub link;
+- Live Demo link.
+
+This completes the workflow:
+
+Original Scrimba exercise
+→ Next.js refactor
+→ standalone GitHub repository
+→ Vercel deployment
+→ Portfolio Learning Project
+→ bilingual case study
+
+---
+
+### Sprint 18 Status
+
+Completed.
+
+Main outcomes:
+
+- Original Scrimba Tenzies project revisited
+- React project refactored with Next.js and TypeScript
+- Game functionality improved
+- Statistics and persistent records added
+- Standalone GitHub repository created
+- Application deployed to Vercel
+- Tenzies project data added to the Portfolio
+- FR / EN case study available
+- Learning Project cards extended to support case-study navigation
+- GitHub and Live Demo links integrated
