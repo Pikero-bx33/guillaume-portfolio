@@ -96,7 +96,7 @@ export const printForgeProject: Record<Locale, ProjectDetails> = {
     ],
 
     githubUrl: "https://github.com/Pikero-bx33/printforge",
-    liveUrl: undefined,
+    liveUrl: "https://printforge-phi.vercel.app",
   },
 
   fr: {
@@ -193,6 +193,6 @@ export const printForgeProject: Record<Locale, ProjectDetails> = {
     ],
 
     githubUrl: "https://github.com/Pikero-bx33/printforge",
-    liveUrl: undefined,
+    liveUrl: "https://printforge-phi.vercel.app",
   },
 };
