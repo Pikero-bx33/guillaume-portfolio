@@ -76,7 +76,7 @@ export default function Header({
     <header className="sticky top-0 z-50 w-full border-b border-sand/60 bg-surface/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
-          href={`/${locale}`}
+          href={`/${locale}#top`}
           className="shrink-0"
         >
           <p className="text-lg font-bold tracking-tight text-deep-blue">
@@ -96,8 +96,8 @@ export default function Header({
                 key={lang}
                 href={getLocaleHref(lang)}
                 className={`rounded-full px-2.5 py-1.5 text-[11px] font-semibold uppercase transition-all ${locale === lang
-                    ? "bg-ocean text-white shadow-sm"
-                    : "text-deep-blue hover:text-ocean"
+                  ? "bg-ocean text-white shadow-sm"
+                  : "text-deep-blue hover:text-ocean"
                   }`}
               >
                 {lang}

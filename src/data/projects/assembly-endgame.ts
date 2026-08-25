@@ -38,7 +38,7 @@ export const assemblyEndgameProject: Record<
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind CSS",
+      "CSS",
       "LocalStorage",
     ],
 
@@ -130,7 +130,7 @@ export const assemblyEndgameProject: Record<
       "Next.js",
       "React",
       "TypeScript",
-      "Tailwind CSS",
+      "CSS",
       "LocalStorage",
     ],
 
