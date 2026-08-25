@@ -5,6 +5,7 @@ import { printForgeProject } from "./printforge";
 import { ecoProfsProject } from "./ecoprofs";
 import { portfolioProject } from "./portfolio";
 import { tenziesProject } from "./tenzies";
+import { assemblyEndgameProject } from "./assembly-endgame";
 
 export const projects: Record<
   string,
@@ -14,4 +15,5 @@ export const projects: Record<
   ecoprofs: ecoProfsProject,
   portfolio: portfolioProject,
   tenzies: tenziesProject,
+  "assembly-endgame": assemblyEndgameProject,
 };

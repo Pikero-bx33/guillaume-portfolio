@@ -54,7 +54,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Hangman-inspired game built to strengthen React logic and state management.",
         stack: ["React"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
@@ -166,7 +166,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
           "Jeu inspiré du pendu réalisé pour approfondir la logique et la gestion du state avec React.",
         stack: ["React"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
