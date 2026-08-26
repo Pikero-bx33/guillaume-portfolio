@@ -6,6 +6,7 @@ import { ecoProfsProject } from "./ecoprofs";
 import { portfolioProject } from "./portfolio";
 import { tenziesProject } from "./tenzies";
 import { assemblyEndgameProject } from "./assembly-endgame";
+import { curioLabProject } from "./curio-lab";
 
 export const projects: Record<
   string,
@@ -16,4 +17,5 @@ export const projects: Record<
   portfolio: portfolioProject,
   tenzies: tenziesProject,
   "assembly-endgame": assemblyEndgameProject,
+  "curio-lab": curioLabProject,
 };

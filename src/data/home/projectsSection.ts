@@ -52,7 +52,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         title: "Assembly: End Game",
         description:
           "Hangman-inspired game built to strengthen React logic and state management.",
-        stack: ["React"],
+        stack: ["Next.js", "React", "TypeScript"],
         status: "learning",
         hasCaseStudy: true,
       },
@@ -80,14 +80,14 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
       },
 
       {
-        slug: "quizzical",
+        slug: "curio-lab",
         year: 2026,
-        title: "Quizzical",
+        title: "Curio Lab",
         description:
           "Quiz application built with Next.js and TypeScript to practice application logic.",
-        stack: ["Next.js", "TypeScript"],
+        stack: ["Next.js", "TypeScript, CSS, Zod"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
@@ -164,7 +164,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         title: "Assembly: End Game",
         description:
           "Jeu inspiré du pendu réalisé pour approfondir la logique et la gestion du state avec React.",
-        stack: ["React"],
+        stack: ["Next.js", "React", "TypeScript"],
         status: "learning",
         hasCaseStudy: true,
       },
@@ -192,14 +192,14 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
       },
 
       {
-        slug: "quizzical",
+        slug: "curio-lab",
         year: 2026,
-        title: "Quizzical",
+        title: "Curio Lab",
         description:
           "Application de quiz en Next.js et TypeScript pour approfondir la logique applicative.",
-        stack: ["Next.js", "TypeScript"],
+        stack: ["Next.js", "TypeScript, CSS, Zod"],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
