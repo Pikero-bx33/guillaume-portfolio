@@ -89,6 +89,37 @@ export const curioLabProject: Record<Locale, ProjectDetails> = {
       "Continue expanding the scientific question bank.",
     ],
 
+    gallery: [
+      {
+        src: "/images/projects/curio-lab/welcome-en.png",
+        alt: "CurioLab welcome screen",
+        caption:
+          "Welcome screen and explorer identification before starting the science journey",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/setup-en.png",
+        alt: "CurioLab quiz setup screen",
+        caption:
+          "Quiz configuration with science category, difficulty and question count selection",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/quiz-en.png",
+        alt: "CurioLab science quiz interface",
+        caption:
+          "Interactive quiz with progress tracking, answers and educational feedback",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/results-en.png",
+        alt: "CurioLab quiz results screen",
+        caption:
+          "End-of-quiz results with score, accuracy and correct answers",
+        aspect: "landscape",
+      },
+    ],
+
     githubUrl: "https://github.com/Pikero-bx33/curio-lab",
     liveUrl: "https://curio-lab-delta.vercel.app/",
   },
@@ -178,6 +209,37 @@ export const curioLabProject: Record<Locale, ProjectDetails> = {
       "Mettre en place un système anti-répétition entre les sessions.",
       "Enrichir l'écran de résultats de fin de quiz.",
       "Continuer à développer la banque de questions scientifiques.",
+    ],
+
+    gallery: [
+      {
+        src: "/images/projects/curio-lab/welcome-fr.png",
+        alt: "Écran d'accueil de CurioLab",
+        caption:
+          "Écran d'accueil et identification de l'explorateur avant de commencer le parcours scientifique",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/setup-fr.png",
+        alt: "Écran de configuration du quiz CurioLab",
+        caption:
+          "Configuration du quiz avec sélection de la catégorie scientifique, de la difficulté et du nombre de questions",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/quiz-fr.png",
+        alt: "Interface du quiz scientifique CurioLab",
+        caption:
+          "Quiz interactif avec progression, réponses et feedback pédagogique",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/curio-lab/results-fr.png",
+        alt: "Écran de résultats du quiz CurioLab",
+        caption:
+          "Résultats de fin de quiz avec score, précision et nombre de bonnes réponses",
+        aspect: "landscape",
+      },
     ],
 
     githubUrl: "https://github.com/Pikero-bx33/curio-lab",

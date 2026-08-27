@@ -90,6 +90,37 @@ export const assemblyEndgameProject: Record<
       "Continue refining animations and game feedback.",
     ],
 
+    gallery: [
+      {
+        src: "/images/projects/assembly-endgame/start.png",
+        alt: "Assembly Endgame starting screen",
+        caption:
+          "New game with the programming language stack, hidden word and interactive keyboard",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/gameplay.png",
+        alt: "Assembly Endgame gameplay",
+        caption:
+          "Word guessing gameplay with correct and incorrect guesses and programming language elimination",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/hint.png",
+        alt: "Assembly Endgame hint system",
+        caption:
+          "Hint system helping the player progress while tracking hint usage in the game statistics",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/game-over.png",
+        alt: "Assembly Endgame end-of-game screen",
+        caption:
+          "End-of-game state with final result, player statistics and option to start a new game",
+        aspect: "landscape",
+      },
+    ],
+
     githubUrl:
       "https://github.com/Pikero-bx33/assembly-endgame-next",
 
@@ -180,6 +211,37 @@ export const assemblyEndgameProject: Record<
       "Améliorer encore l'accessibilité clavier et les retours pour les lecteurs d'écran.",
       "Ajouter de nouveaux modes de jeu ou challenges.",
       "Continuer à enrichir les animations et le feedback utilisateur.",
+    ],
+
+    gallery: [
+      {
+        src: "/images/projects/assembly-endgame/start.png",
+        alt: "Écran de début de partie d'Assembly Endgame",
+        caption:
+          "Nouvelle partie avec la pile des langages de programmation, le mot caché et le clavier interactif",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/gameplay.png",
+        alt: "Partie en cours dans Assembly Endgame",
+        caption:
+          "Recherche du mot avec bonnes et mauvaises réponses et élimination progressive des langages de programmation",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/hint.png",
+        alt: "Système d'indices d'Assembly Endgame",
+        caption:
+          "Système d'indices permettant d'aider le joueur tout en comptabilisant leur utilisation dans les statistiques",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/assembly-endgame/game-over.png",
+        alt: "Écran de fin de partie d'Assembly Endgame",
+        caption:
+          "Fin de partie avec résultat, statistiques du joueur et possibilité de lancer une nouvelle partie",
+        aspect: "landscape",
+      },
     ],
 
     githubUrl:

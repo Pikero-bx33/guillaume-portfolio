@@ -78,6 +78,37 @@ export const tenziesProject: Record<Locale, ProjectDetails> = {
       "Explore authenticated player profiles and an online leaderboard.",
     ],
 
+    gallery: [
+      {
+        src: "/images/projects/tenzies/start-en.png",
+        alt: "Tenzies game starting screen",
+        caption:
+          "New game with ten randomly generated dice ready to be played",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/gameplay-en.png",
+        alt: "Tenzies gameplay with held dice",
+        caption:
+          "Interactive gameplay with individual dice selection and hold states",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/stats-en.png",
+        alt: "Tenzies game statistics and records",
+        caption:
+          "Game progress with roll counter, timer and persistent personal records",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/victory-en.png",
+        alt: "Tenzies victory screen",
+        caption:
+          "Victory state with completed game statistics and confetti feedback",
+        aspect: "landscape",
+      },
+    ],
+
     githubUrl: "https://github.com/Pikero-bx33/tenzies-next",
     liveUrl: "https://tenzies-next.vercel.app/",
   },
@@ -156,6 +187,37 @@ export const tenziesProject: Record<Locale, ProjectDetails> = {
       "Ajouter des animations de lancer et des préférences sonores.",
       "Permettre la réinitialisation des records locaux.",
       "Explorer des profils authentifiés et un classement en ligne.",
+    ],
+
+    gallery: [
+      {
+        src: "/images/projects/tenzies/start-en.png",
+        alt: "Écran de début de partie de Tenzies",
+        caption:
+          "Nouvelle partie avec dix dés générés aléatoirement prêts à être joués",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/gameplay-en.png",
+        alt: "Partie de Tenzies avec des dés conservés",
+        caption:
+          "Gameplay interactif avec sélection individuelle des dés à conserver",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/stats-en.png",
+        alt: "Statistiques et records du jeu Tenzies",
+        caption:
+          "Suivi de la partie avec compteur de lancers, chronomètre et records personnels persistants",
+        aspect: "landscape",
+      },
+      {
+        src: "/images/projects/tenzies/victory-en.png",
+        alt: "Écran de victoire de Tenzies",
+        caption:
+          "État de victoire avec statistiques finales et animation de confettis",
+        aspect: "landscape",
+      },
     ],
 
     githubUrl: "https://github.com/Pikero-bx33/tenzies-next",

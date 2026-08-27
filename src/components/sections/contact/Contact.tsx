@@ -21,7 +21,7 @@ export default function Contact({
             {content.title}
           </h2>
 
-          <p className="mt-4 max-w-2xl leading-7 text-white/70">
+          <p className="mt-6 text-lg leading-8 text-white/70">
             {content.description}
           </p>
 

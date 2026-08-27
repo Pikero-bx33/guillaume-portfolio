@@ -85,7 +85,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         title: "Curio Lab",
         description:
           "Quiz application built with Next.js and TypeScript to practice application logic.",
-        stack: ["Next.js", "TypeScript, CSS, Zod"],
+        stack: ["Next.js", "TypeScript", "CSS", "Zod"],
         status: "learning",
         hasCaseStudy: true,
       },
@@ -197,7 +197,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         title: "Curio Lab",
         description:
           "Application de quiz en Next.js et TypeScript pour approfondir la logique applicative.",
-        stack: ["Next.js", "TypeScript, CSS, Zod"],
+        stack: ["Next.js", "TypeScript", "CSS", "Zod"],
         status: "learning",
         hasCaseStudy: true,
       },
