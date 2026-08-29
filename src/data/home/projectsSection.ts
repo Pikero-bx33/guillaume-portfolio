@@ -36,14 +36,19 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
       },
 
       {
-        slug: "chef-claude",
+        slug: "dishcovery",
         year: 2026,
-        title: "Chef Claude",
+        title: "Dishcovery",
         description:
-          "AI-powered recipe generator built to practice API integration and React state.",
-        stack: ["React", "Claude AI"],
+          "A bilingual AI recipe generator built with structured recipe outputs, unique dish images and Redis-backed usage protection.",
+        stack: [
+          "Next.js",
+          "TypeScript",
+          "OpenAI",
+          "Redis",
+        ],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {
@@ -148,14 +153,19 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
       },
 
       {
-        slug: "chef-claude",
+        slug: "dishcovery",
         year: 2026,
-        title: "Chef Claude",
+        title: "Dishcovery",
         description:
-          "Générateur de recettes par IA réalisé pour travailler l'intégration d'API et le state React.",
-        stack: ["React", "Claude AI"],
+          "Générateur de recettes bilingue combinant recettes structurées, images de plats générées par IA et protection des usages avec Redis.",
+        stack: [
+          "Next.js",
+          "TypeScript",
+          "OpenAI",
+          "Redis",
+        ],
         status: "learning",
-        hasCaseStudy: false,
+        hasCaseStudy: true,
       },
 
       {

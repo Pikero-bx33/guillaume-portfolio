@@ -1,12 +1,13 @@
 import type { Locale } from "@/types/locale";
 import type { ProjectDetails } from "@/types/projectDetails";
 
-import { printForgeProject } from "./printforge";
-import { ecoProfsProject } from "./ecoprofs";
-import { portfolioProject } from "./portfolio";
-import { tenziesProject } from "./tenzies";
 import { assemblyEndgameProject } from "./assembly-endgame";
 import { curioLabProject } from "./curio-lab";
+import { dishcoveryProject } from "./dishcovery";
+import { ecoProfsProject } from "./ecoprofs";
+import { portfolioProject } from "./portfolio";
+import { printForgeProject } from "./printforge";
+import { tenziesProject } from "./tenzies";
 
 export const projects: Record<
   string,
@@ -18,4 +19,5 @@ export const projects: Record<
   tenzies: tenziesProject,
   "assembly-endgame": assemblyEndgameProject,
   "curio-lab": curioLabProject,
+  dishcovery: dishcoveryProject,
 };
