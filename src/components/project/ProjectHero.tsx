@@ -19,7 +19,7 @@ export default function ProjectHero({
         {title}
       </h1>
 
-      <p className="mt-5 max-w-3xl text-lg leading-8 text-muted">
+      <p className="mt-5 max-w-3xl text-lg leading-8 text-muted lg:max-w-none">
         {subtitle}
       </p>
     </section>

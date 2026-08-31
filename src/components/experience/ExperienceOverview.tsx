@@ -13,7 +13,7 @@ export default function ExperienceOverview({
         {title}
       </h2>
 
-      <div className="mt-6 max-w-3xl space-y-5">
+      <div className="mt-6 max-w-3xl space-y-5 lg:max-w-none">
         {overview.map((paragraph) => (
           <p
             key={paragraph}

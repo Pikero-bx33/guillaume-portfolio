@@ -52,9 +52,6 @@ export default function Header({
 
   const alternateLocale = locale === "en" ? "fr" : "en";
 
-  const languageHref =
-    alternateLocaleHref ?? `/${alternateLocale}#top`;
-
   function getNavigationHref(href: string) {
     return navigationBasePath
       ? `${navigationBasePath}${href}`
@@ -70,6 +67,13 @@ export default function Header({
     }
 
     return `/${targetLocale}#top`;
+  }
+
+  function handleLocaleSwitch() {
+    sessionStorage.setItem(
+      "locale-switch-scroll",
+      String(window.scrollY)
+    );
   }
 
   return (
@@ -95,6 +99,8 @@ export default function Header({
               <Link
                 key={lang}
                 href={getLocaleHref(lang)}
+                onClick={handleLocaleSwitch}
+                scroll={false}
                 className={`rounded-full px-2.5 py-1.5 text-[11px] font-semibold uppercase transition-all ${locale === lang
                   ? "bg-ocean text-white shadow-sm"
                   : "text-deep-blue hover:text-ocean"
@@ -144,6 +150,8 @@ export default function Header({
               <Link
                 key={lang}
                 href={getLocaleHref(lang)}
+                onClick={handleLocaleSwitch}
+                scroll={false}
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold uppercase transition-all ${locale === lang
                   ? "bg-ocean text-white shadow-sm"
                   : "text-deep-blue hover:text-ocean"

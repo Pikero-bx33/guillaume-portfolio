@@ -10,7 +10,7 @@ export default function BusinessTechHeader({
   description,
 }: BusinessTechHeaderProps) {
   return (
-    <div className="max-w-3xl xl:max-w-none">
+    <div className="max-w-3xl lg:max-w-5xl xl:max-w-none">
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ocean">
         {eyebrow}
       </p>

@@ -15,8 +15,6 @@ type HeroProps = {
 
 export default function Hero({ content }: HeroProps) {
 
-  const isEnglishTitle = content.title === "Business meets code.";
-
   return (
     <section
       id="top"
@@ -29,12 +27,7 @@ export default function Hero({ content }: HeroProps) {
             {content.eyebrow}
           </p>
 
-          <h1
-            className={`mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-deep-blue sm:text-5xl lg:text-6xl xl:text-7xl ${isEnglishTitle
-              ? "md:whitespace-nowrap md:text-[3rem]"
-              : "md:text-[3rem]"
-              }`}
-          >
+          <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-deep-blue sm:text-5xl md:text-[3rem] md:whitespace-nowrap lg:text-6xl xl:text-7xl">
             {content.title}
           </h1>
 

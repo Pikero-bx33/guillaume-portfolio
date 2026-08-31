@@ -73,7 +73,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         hasCaseStudy: true,
       },
 
-      {
+      /* {
         slug: "todo-ai",
         year: 2026,
         title: "Todo AI",
@@ -82,7 +82,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         stack: ["React Native", "Expo"],
         status: "learning",
         hasCaseStudy: false,
-      },
+      }, */
 
       {
         slug: "curio-lab",
@@ -190,7 +190,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         hasCaseStudy: true,
       },
 
-      {
+      /* {
         slug: "todo-ai",
         year: 2026,
         title: "Todo AI",
@@ -199,7 +199,7 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         stack: ["React Native", "Expo"],
         status: "learning",
         hasCaseStudy: false,
-      },
+      }, */
 
       {
         slug: "curio-lab",

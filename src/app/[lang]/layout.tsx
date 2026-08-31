@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+import LocaleScrollRestorer from "@/components/navigation/LocaleScrollRestorer";
+
 import type { Locale } from "@/types/locale";
 
 type LangLayoutProps = {
@@ -23,6 +25,8 @@ export default async function LangLayout({
 
   return (
     <div lang={lang}>
+      <LocaleScrollRestorer />
+
       {children}
     </div>
   );
