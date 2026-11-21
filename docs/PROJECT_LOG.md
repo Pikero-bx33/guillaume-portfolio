@@ -2090,3 +2090,190 @@ Main outcomes:
 - FR / EN case study available
 - Learning Project cards extended to support case-study navigation
 - GitHub and Live Demo links integrated
+
+---
+
+## Sprint 19 — myNews Featured Case Study
+
+### Objective
+
+Replace the previous AI News Aggregator placeholder with myNews as the main featured project in the portfolio.
+
+---
+
+### 1. Featured Project Migration
+
+Replaced AI News Aggregator with myNews in the bilingual Projects section.
+
+myNews now uses:
+
+- slug: `mynews`;
+- `status: "featured"`;
+- `hasCaseStudy: true`.
+
+The project was placed first in the Main Projects section to present it as the primary portfolio project.
+
+---
+
+### 2. Bilingual Case Study
+
+Created dedicated bilingual project data:
+
+`src/data/projects/mynews.ts`
+
+Registered myNews in:
+
+`src/data/projects/index.ts`
+
+The case study documents the product, objectives, architecture, challenges, lessons learned and realistic next steps in English and French.
+
+The architecture covers:
+
+- React Native and Expo;
+- TypeScript and Redux Toolkit;
+- Express;
+- MongoDB and Mongoose;
+- Better Auth;
+- TheNewsAPI.
+
+Key technical topics include Native/Web authentication, Secure Store versus browser cookies, CORS and trusted origins, SameSite behaviour, Safari versus Chrome, custom `app` and `api` subdomains, Render deployment and responsive Web adaptation.
+
+Links added to the case study:
+
+- GitHub: https://github.com/Pikero-bx33/myNews
+- Live application: https://app.mynewsfeed.fyi
+
+---
+
+### 3. Gallery and Branding
+
+Added the project asset folder:
+
+`public/images/projects/mynews/`
+
+Added five localized mobile screenshots to the English and French galleries, with dedicated alt text and captions.
+
+Added the myNews mark to the project hero through an optional `logo` field in `ProjectDetails`.
+
+`ProjectHero` renders the mark only when a project provides a logo, preserving the existing visual presentation of all other case studies.
+
+---
+
+### Sprint 19 Status
+
+Completed.
+
+Main outcomes:
+
+- AI News Aggregator replaced by myNews;
+- myNews promoted to the first Featured Project;
+- bilingual case study and project registry added;
+- GitHub and Live links integrated;
+- localized gallery and optional hero branding added.
+
+---
+
+## Sprint 20 — AI Sales Assistant Agent
+
+### Objective
+
+Add a future AI and business-development project to the portfolio without presenting unbuilt functionality as completed work.
+
+---
+
+### 1. Coming Soon Project
+
+Added AI Sales Assistant Agent to the bilingual Coming Soon / À venir section.
+
+The project uses:
+
+- slug: `ai-sales-assistant-agent`;
+- `status: "coming-soon"`;
+- `hasCaseStudy: false`.
+
+It is presented as a future AI-powered sales assistant for customer-acquisition workflows, including possible directions such as lead qualification, enrichment, personalised outreach and opportunity prioritisation.
+
+---
+
+### 2. Learning Path
+
+The project is positioned as a future build prepared through an OpenAI Academy learning path, AI agent fundamentals and progressively smaller agent experiments.
+
+No case study, GitHub link, live demo, certification claim or fictitious completed feature was added.
+
+---
+
+### Sprint 20 Status
+
+Completed.
+
+Main outcomes:
+
+- Future AI sales project added in English and French;
+- Coming Soon status preserved;
+- Scope kept deliberately prospective and accurate.
+
+---
+
+## Sprint 21 — myNews SEO and Final QA
+
+### Objective
+
+Complete the portfolio integration with sitemap coverage, SEO verification, dependency-lock validation and final quality checks.
+
+---
+
+### 1. Sitemap and Localized Metadata
+
+Added the myNews project routes to the sitemap:
+
+- `/en/projects/mynews`;
+- `/fr/projects/mynews`.
+
+Verified the existing dynamic project route provides localized title and description metadata, canonical URLs and English/French alternates for the case study.
+
+---
+
+### 2. Lockfile Recovery
+
+The previous `package-lock.json` was out of sync with `package.json`, causing `npm ci` to fail after local dependencies were removed.
+
+Running `npm install` regenerated the compatible lockfile without adding or changing declared application dependencies.
+
+The corrected lockfile was validated with:
+
+`npm ci --dry-run --ignore-scripts`
+
+---
+
+### 3. Final QA
+
+Validated the portfolio update with:
+
+- `npm run lint`;
+- `npm run build`;
+- `git diff --check`.
+
+All checks completed successfully.
+
+---
+
+### Technical Note — Local Next.js Development
+
+During local testing, `next dev` temporarily blocked while compiling App Router pages with a Turbopack timeout in `app-page-turbo.runtime.dev.js`.
+
+Resetting `.next` and `node_modules` exposed the lockfile mismatch. After resynchronising the lockfile with `npm install`, the local Next.js server worked again.
+
+---
+
+### Sprint 21 Status
+
+Completed.
+
+Main outcomes:
+
+- myNews sitemap routes added;
+- localized project metadata and navigation verified;
+- lockfile resynchronised and validated;
+- local development environment recovered;
+- final lint, build and diff checks passed.

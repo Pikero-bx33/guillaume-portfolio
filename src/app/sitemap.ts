@@ -23,6 +23,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Projects
     {
+      url: `${baseUrl}/en/projects/mynews`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fr/projects/mynews`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/en/projects/printforge`,
       lastModified: now,
       changeFrequency: "monthly",
