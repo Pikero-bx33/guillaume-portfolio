@@ -9,6 +9,7 @@ export type ProjectDetails = {
   slug: string;
   title: string;
   subtitle: string;
+  logo?: string;
 
   role: string;
   duration: string;

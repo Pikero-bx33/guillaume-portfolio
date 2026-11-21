@@ -14,6 +14,24 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
 
     projects: [
       {
+        slug: "mynews",
+        year: 2026,
+        title: "myNews",
+        description:
+          "Personalised news app built from one Expo codebase for native and web, with authentication, preferences, curated feeds and reading states.",
+        stack: [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Express",
+          "MongoDB",
+          "Better Auth",
+        ],
+        status: "featured",
+        hasCaseStudy: true,
+      },
+
+      {
         slug: "printforge",
         year: 2026,
         title: "PrintForge",
@@ -96,17 +114,6 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
       },
 
       {
-        slug: "ai-news-aggregator",
-        year: 2026,
-        title: "AI News Aggregator",
-        description:
-          "AI-powered news aggregation platform currently in development.",
-        stack: ["React Native", "TypeScript", "Express", "MongoDB"],
-        status: "coming-soon",
-        hasCaseStudy: false,
-      },
-
-      {
         slug: "portfolio",
         year: 2026,
         title: "Personal Portfolio",
@@ -130,6 +137,24 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
     inProgressLabel: "En cours",
 
     projects: [
+      {
+        slug: "mynews",
+        year: 2026,
+        title: "myNews",
+        description:
+          "Application d'actualités personnalisée, développée depuis une même codebase Expo pour le natif et le Web, avec authentification, préférences, feed adapté et états de lecture.",
+        stack: [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Express",
+          "MongoDB",
+          "Better Auth",
+        ],
+        status: "featured",
+        hasCaseStudy: true,
+      },
+
       {
         slug: "printforge",
         year: 2026,
@@ -210,17 +235,6 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         stack: ["Next.js", "TypeScript", "CSS", "Zod"],
         status: "learning",
         hasCaseStudy: true,
-      },
-
-      {
-        slug: "ai-news-aggregator",
-        year: 2026,
-        title: "AI News Aggregator",
-        description:
-          "Plateforme d'agrégation de contenus d'actualité enrichie par IA, actuellement en développement.",
-        stack: ["React Native", "TypeScript", "Express", "MongoDB"],
-        status: "coming-soon",
-        hasCaseStudy: false,
       },
 
       {

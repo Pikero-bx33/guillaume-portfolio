@@ -120,6 +120,7 @@ export default async function ProjectPage({
           label={labels.caseStudy}
           title={project.title}
           subtitle={project.subtitle}
+          logo={project.logo}
         />
 
         <ProjectMeta
