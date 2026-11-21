@@ -123,6 +123,17 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         status: "featured",
         hasCaseStudy: true,
       },
+
+      {
+        slug: "ai-sales-assistant-agent",
+        year: 2026,
+        title: "AI Sales Assistant Agent",
+        description:
+          "Future AI-powered sales assistant for customer acquisition workflows, from lead qualification to personalised outreach, to be built progressively after an OpenAI Academy learning path.",
+        stack: ["Next.js", "TypeScript", "OpenAI", "AI Agents"],
+        status: "coming-soon",
+        hasCaseStudy: false,
+      },
     ],
   },
 
@@ -246,6 +257,17 @@ export const projectsContent: Record<Locale, ProjectsSectionContent> = {
         stack: ["Next.js", "TypeScript", "Tailwind CSS"],
         status: "featured",
         hasCaseStudy: true,
+      },
+
+      {
+        slug: "ai-sales-assistant-agent",
+        year: 2026,
+        title: "AI Sales Assistant Agent",
+        description:
+          "Futur assistant commercial propulsé par l'IA pour accompagner les workflows d'acquisition client, de la qualification des prospects à la personnalisation des approches, développé progressivement après un parcours d'apprentissage OpenAI Academy.",
+        stack: ["Next.js", "TypeScript", "OpenAI", "AI Agents"],
+        status: "coming-soon",
+        hasCaseStudy: false,
       },
     ],
   },
